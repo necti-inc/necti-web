@@ -1,0 +1,310 @@
+/* Hero Section Style */
+.heroContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  .title {
+    font-size: 58px;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .subTitle {
+    width: 80%;
+    font-size: 24px;
+    text-align: center;
+    margin-top: 5px;
+  }
+  
+  .ctaContainer {
+    display: flex;
+    justify-content: center;
+    gap: 13px;
+    margin-top: 35px;
+  }
+  
+  /* Solutions Section Style */
+  .solutionContainer {
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    gap: 200px;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+  
+  .solutionTitle {
+    font-size: 35px;
+    font-weight: bold;
+    margin-top: 15px;
+  }
+  
+  .solutionSubTitle {
+    margin-top: 15px;
+    font-size: 18px;
+  }
+  
+  .textButtonContainer {
+    display: flex;
+    margin-top: 20px;
+    gap: 5px;
+  }
+  
+  .textButton {
+    font-weight: 600;
+  }
+  
+  .textButtonIcon {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .rightItem {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+  }
+  
+  /* Our Work Section Style */
+  .ourWorkContainer {
+    width: 100vw;
+    padding-top: 150px;
+    padding-bottom: 150px;
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+  
+  .ourWorkHeader {
+    font-size: 35px;
+    font-weight: bold;
+  }
+  
+  /* Our Work Style */
+  .container {
+    margin-top: 5px;
+  }
+  
+  .miniNav {
+    display: flex;
+    gap: 30px;
+  }
+  
+  /* Mini Nav Item Style */
+  .bottomBar {
+    width: 100%;
+    height: 2px;
+    border-radius: 100px;
+  }
+  
+  .miniNavTitle {
+    font-size: 12px;
+    font-weight: 500;
+  }
+  
+  .ourWorkCardsContainer {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 70px 20px;
+  }
+  
+  /* Our Work Box Style */
+  .ourWorkBoxContainer {
+    height: 450px;
+    width: 450px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-width: 1px;
+    border-style: solid;
+  }
+  
+  .imageContainer {
+    height: 360px;
+    width: 100%;
+    background-color: thistle;
+  }
+  
+  .titleContainer {
+    position: relative;
+    padding-left: 27px;
+    padding-top: 4%;
+  }
+  
+  .name {
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+  
+  .type {
+    font-size: 12px;
+  }
+  
+  /* Solution Box Style */
+  .solutionBoxContainer {
+    width: 160px;
+    height: 160px;
+    border-radius: 6px;
+    border-width: 1px;
+    border-style: solid;
+  }
+  
+  /* Media Queries */
+  @media only screen and (max-width: 1024px) {
+    /* For iPad */
+    .heroContainer {
+      width: 80%;
+    }
+    
+    .solutionContainer {
+      flex-direction: column;
+      align-items: center;
+      gap: 50px;
+      padding-top: 150px;
+      padding-bottom: 150px;
+      padding-left: 10%;
+      padding-right: 10%;
+    }
+    
+    .solutionTitle {
+      font-size: 30px;
+    }
+    
+    .solutionSubTitle {
+      font-size: 16px;
+    }
+    
+    .textButtonContainer {
+      flex-direction: column;
+      align-items: center;
+      margin-top: 15px;
+    }
+    
+    .textButton {
+      font-size: 14px;
+    }
+    
+    .rightItem {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+    
+    .ourWorkContainer {
+      padding-top: 100px;
+      padding-bottom: 100px;
+    }
+    
+    .ourWorkHeader {
+      font-size: 30px;
+    }
+    
+    .ourWorkCardsContainer {
+      grid-template-columns: 1fr;
+      grid-gap: 40px;
+    }
+    
+    .ourWorkBoxContainer {
+      height: 350px;
+      width: 80%;
+    }
+    
+    .name {
+      font-size: 18px;
+    }
+    
+    .type {
+      font-size: 12px;
+    }
+    
+    .solutionBoxContainer {
+      width: 120px;
+      height: 120px;
+    }
+  }
+  
+  @media only screen and (max-width: 414px) {
+    /* For iPhone */
+    .heroContainer {
+      width: 90%;
+    }
+    
+    .solutionContainer {
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+      padding-top: 100px;
+      padding-bottom: 100px;
+      padding-left: 8%;
+      padding-right: 8%;
+    }
+    
+    .solutionTitle {
+      font-size: 26px;
+    }
+    
+    .solutionSubTitle {
+      font-size: 14px;
+    }
+    
+    .textButtonContainer {
+      flex-direction: column;
+      align-items: center;
+      margin-top: 10px;
+    }
+    
+    .textButton {
+      font-size: 12px;
+    }
+    
+    .rightItem {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+    }
+    
+    .ourWorkContainer {
+      padding-top: 80px;
+      padding-bottom: 80px;
+    }
+    
+    .ourWorkHeader {
+      font-size: 26px;
+    }
+    
+    .ourWorkCardsContainer {
+      grid-template-columns: 1fr;
+      grid-gap: 30px;
+    }
+    
+    .ourWorkBoxContainer {
+      height: 300px;
+      width: 80%;
+    }
+    
+    .name {
+      font-size: 16px;
+    }
+    
+    .type {
+      font-size: 10px;
+    }
+    
+    .solutionBoxContainer {
+      width: 100px;
+      height: 100px;
+    }
+  }
+  
