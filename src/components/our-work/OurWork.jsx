@@ -5,6 +5,7 @@ import style from "./ourwork.module.css";
 import MiniNavItem from "./MiniNavItem";
 import theme from "@/app/theme";
 import OurWorkBox from "../our-work-box/OurWorkBox";
+import ViewAllButton from "../view-all-button/ViewAllButton";
 
 function OurWork() {
   const [activeColorWeb, setActiveColorWeb] = useState([
@@ -48,9 +49,12 @@ function OurWork() {
       <div className={style.ourWorkCardsContainer}>
         {Array.from({ length: 4 }).map((_, index) => (
           <div key={index}>
-            <OurWorkBox devType="Web Development" businessName="Pest" />
+            <OurWorkBox devType="Web Development" businessName="pictureitmobile.com" />
           </div>
         ))}
+      </div>
+      <div className={style.lowerButtonContainer}>
+        <ViewAllButton title="View all work" path="/work" />
       </div>
     </div>
   );

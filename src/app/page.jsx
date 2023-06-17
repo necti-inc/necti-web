@@ -1,42 +1,36 @@
-import Image from "next/image";
 import styles from "./page.module.css";
-import Link from "next/link";
 import theme from "./theme";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCoffee, faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
 import SolutionBox from "@/components/solution-box/SolutionBox";
 import OurWork from "@/components/our-work/OurWork";
+import ViewAllButton from "@/components/view-all-button/ViewAllButton";
+import BusinessBar from "@/components/business-bar/BusinessBar";
+
+import googleIcon from "../../public/icons/google-icon.png";
+import shopifyIcon from "../../public/icons/shopify-icon.png";
+import nextjsIcon from "../../public/icons/nextjs-icon.png";
+import nextdoorIcon from "../../public/icons/nextdoor-icon.png";
+import facebookIcon from "../../public/icons/facebook-icon.png";
+import instagramIcon from "../../public/icons/instagram-icon.png";
+import reactIcon from "../../public/icons/react-icon.png";
+import yelpIcon from "../../public/icons/yelp-icon.png";
+import htmlIcon from "../../public/icons/html-icon.png";
+
+const solutionsImage = [
+  googleIcon,
+  shopifyIcon,
+  reactIcon,
+  nextjsIcon,
+  htmlIcon,
+  nextdoorIcon,
+  yelpIcon,
+  instagramIcon,
+  facebookIcon,
+];
 
 export default function Home() {
   return (
     <div className={styles.container}>
-      {/* <div>
-        <img src="/home-background.png" width={"100%"}/>
-      </div> */}
-      {/* <div className={styles.heroContainer}>
-        <h1 style={{ color: theme.black }} className={styles.title}>
-          Level up your business with a strong online presence
-        </h1>
-        <p style={{ color: theme.black }} className={styles.subTitle}>
-          Stand out from the competition with a professional website and SEO
-          optimization.
-        </p>
-        <div className={styles.ctaContainer}>
-          <button
-            style={{ backgroundColor: theme.black, color: theme.white }}
-            className="buttonDark"
-          >
-            Free Quote
-          </button>
-          <button
-            style={{ borderColor: theme.black, color: theme.black }}
-            className="buttonLight"
-          >
-            See Pricing
-          </button>
-        </div>
-      </div> */}
       <div
         style={{
           backgroundImage: 'url("/home-background.png")',
@@ -92,25 +86,12 @@ export default function Home() {
             solutions. Drive qualified traffic to your site and boost your
             companies visibility.
           </p>
-          <div className={styles.textButtonContainer}>
-            <Link
-              style={{ color: theme.primaryColor }}
-              className={styles.textButton}
-              href={"/solutions"}
-            >
-              View all solutions
-            </Link>
-            <FontAwesomeIcon
-              style={{ color: theme.primaryColor }}
-              icon={faArrowRightLong}
-              className={styles.textButtonIcon}
-            />
-          </div>
+          <ViewAllButton title="View all solutions" path="/solutions" />
         </div>
         <div className={styles.rightItem}>
-          {Array.from({ length: 9 }).map((_, index) => (
-            <div key={index} className={styles.gridItem}>
-              <SolutionBox />
+          {solutionsImage.map((image, index) => (
+            <div key={index}>
+              <SolutionBox image={image} path={"/solutions"} />
             </div>
           ))}
         </div>
@@ -121,6 +102,7 @@ export default function Home() {
         </h2>
         <OurWork />
       </div>
+      <BusinessBar />
     </div>
   );
 }

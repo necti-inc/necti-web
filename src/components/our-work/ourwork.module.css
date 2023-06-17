@@ -26,3 +26,14 @@
   grid-gap: 70px 20px;
   place-items: center;
 }
+
+.textButtonIcon {
+  width: 20px;
+  height: 20px;
+}
+
+.lowerButtonContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 35px;
+}

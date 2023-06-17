@@ -1,0 +1,14 @@
+.textButtonContainer {
+    display: flex;
+    margin-top: 20px;
+    gap: 5px;
+  }
+  
+  .textButton {
+    font-weight: 600;
+  }
+  
+  .textButtonIcon {
+    width: 20px;
+    height: 20px;
+  }
