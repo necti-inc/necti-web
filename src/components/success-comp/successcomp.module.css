@@ -1,0 +1,15 @@
+.state {
+  color: red;
+}
+
+.active-state {
+  color: blue;
+}
+
+.test {
+  display: none;
+}
+
+.active-test {
+  display: revert;
+}

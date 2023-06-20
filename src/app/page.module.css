@@ -82,3 +82,11 @@
   font-weight: bold;
 }
 
+/* Success Section Style */
+.successContainer {
+}
+
+.successSubTitle {
+  margin-top: 15px;
+  font-size: 18px;
+}
