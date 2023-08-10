@@ -22,7 +22,7 @@
 .ourWorkCardsContainer {
   margin-top: 40px;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-gap: 70px 20px;
   place-items: center;
 }

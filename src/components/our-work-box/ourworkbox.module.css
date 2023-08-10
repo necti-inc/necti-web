@@ -1,8 +1,7 @@
 .container {
   height: 375px;
   width: 350px;
-  border-bottom-right-radius: 20px;
-  border-bottom-left-radius: 20px;
+  border-radius: 20px;
   border-width: 1px;
   border-style: solid;
   transition: border-color box-shadow 0.3s ease-in-out;
@@ -18,6 +17,8 @@
 .imageContainer {
   height: 300px;
   width: 100%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
   background-color: thistle;
 }
 

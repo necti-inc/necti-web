@@ -1,5 +1,6 @@
 import style from "./page.module.css";
 import theme from "./theme";
+import Image from "next/image";
 
 import SolutionBox from "@/components/solution-box/SolutionBox";
 import OurWork from "@/components/our-work/OurWork";
@@ -15,7 +16,9 @@ import instagramIcon from "../../public/icons/instagram-icon.png";
 import reactIcon from "../../public/icons/react-icon.png";
 import yelpIcon from "../../public/icons/yelp-icon.png";
 import htmlIcon from "../../public/icons/html-icon.png";
-import SuccessComp from "@/components/success-comp/SuccessComp";
+
+import test from "../../public/what-we-do-seperator.png";
+import HowItWorks from "@/components/how-it-works/HowItWorks";
 
 const solutionsImage = [
   googleIcon,
@@ -27,6 +30,18 @@ const solutionsImage = [
   yelpIcon,
   instagramIcon,
   facebookIcon,
+];
+
+const itemsList = [
+  [
+    "Design",
+    "Choose from 100s of high quality themes. Or create your own unique theme.",
+  ],
+  ["Develop", "Once you have chosen a theme. We will begin development. "],
+  [
+    "Deploy",
+    "Once development is complete you will be able to choose the best hosting plan for you.",
+  ],
 ];
 
 export default function Home() {
@@ -104,17 +119,32 @@ export default function Home() {
         <OurWork />
       </div>
       <BusinessBar />
-      <div style={{ backgroundColor: theme.lightGrey }}>
-        <div className={style.successContainer}>
+      <div
+        style={{ backgroundColor: theme.lightGrey }}
+        className={style.whatWeDo}
+      >
+        <div className={style.whatWeDoImage}>p</div>
+        <Image
+          className={style.whatWeDoSeperator}
+          src={test}
+          alt="Solution Image"
+        />
+        <div className={style.whatWeDoTextContainer}>
           <h2 style={{ color: theme.black }} className={style.solutionTitle}>
-            Driving Success for Your Business
+            Our Solutions are Thoughtfully Created with User Experience in Mind
           </h2>
-          <p style={{ color: theme.black }} className={style.successSubTitle}>
-            Maximizing your business potential with <br /> custom web solutions.
-          </p>
+          <div className={style.whatWeDoSubheaderContainer}>
+            <p
+              style={{ color: theme.black }}
+              className={style.solutionSubTitle}
+            >
+              We are passionate about create high-quality work that is visually
+              appealing, highly functional, and easy to use.
+            </p>
+          </div>
         </div>
-        <SuccessComp />
       </div>
+      <HowItWorks title="Web-Development" collection={itemsList} />
     </div>
   );
 }

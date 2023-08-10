@@ -1,15 +1,41 @@
-.state {
-  color: red;
+.container {
+  margin-top: 30px;
 }
 
-.active-state {
-  color: blue;
+.contentContainer {
+  width: 30%;
+  border-left-style: solid;
+  border-left-width: 3px;
 }
 
-.test {
+.leftContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.header-state {
+  text-align: left;
+  font-size: 26px;
+  padding-left: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.active-header-state {
+  text-align: left;
+  font-size: 26px;
+  padding-left: 20px;
+  padding-top: 10px;
+}
+
+.description-state {
   display: none;
 }
 
-.active-test {
+.active-description-state {
   display: revert;
+  text-align: left;
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-bottom: 10px;
 }
