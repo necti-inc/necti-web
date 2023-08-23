@@ -1,0 +1,33 @@
+.container {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+/* Card Component Style */
+.cardContainer {
+  width: 410px;
+  height: 210px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.solutionTitleCard {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.solutionSubTitleCard {
+  margin-top: 10px;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.icon {
+  width: 25px;
+  height: 25px;
+}

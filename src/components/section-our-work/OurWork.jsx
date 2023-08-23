@@ -4,8 +4,8 @@ import React, { useState, useEffect } from "react";
 import style from "./ourwork.module.css";
 import MiniNavItem from "./MiniNavItem";
 import theme from "@/app/theme";
-import OurWorkBox from "../our-work-box/OurWorkBox";
-import ViewAllButton from "../view-all-button/ViewAllButton";
+import OurWorkBox from "../comp-our-work-box/OurWorkBox";
+import ViewAllButton from "../button-view-all/ViewAllButton";
 
 function OurWork() {
   const [activeColorWeb, setActiveColorWeb] = useState([
@@ -49,7 +49,10 @@ function OurWork() {
       <div className={style.ourWorkCardsContainer}>
         {Array.from({ length: 6 }).map((_, index) => (
           <div key={index}>
-            <OurWorkBox devType="Web Development" businessName="pictureitmobile.com" />
+            <OurWorkBox
+              devType="Web Development"
+              businessName="pictureitmobile.com"
+            />
           </div>
         ))}
       </div>

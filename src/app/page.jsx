@@ -2,10 +2,10 @@ import style from "./page.module.css";
 import theme from "./theme";
 import Image from "next/image";
 
-import SolutionBox from "@/components/solution-box/SolutionBox";
-import OurWork from "@/components/our-work/OurWork";
-import ViewAllButton from "@/components/view-all-button/ViewAllButton";
-import BusinessBar from "@/components/business-bar/BusinessBar";
+import SolutionBox from "@/components/comp-solution-box/SolutionBox";
+import OurWork from "@/components/section-our-work/OurWork";
+import ViewAllButton from "@/components/button-view-all/ViewAllButton";
+import BusinessBar from "@/components/comp-business-bar/BusinessBar";
 
 import googleIcon from "../../public/icons/google-icon.png";
 import shopifyIcon from "../../public/icons/shopify-icon.png";
@@ -18,7 +18,8 @@ import yelpIcon from "../../public/icons/yelp-icon.png";
 import htmlIcon from "../../public/icons/html-icon.png";
 
 import test from "../../public/what-we-do-seperator.png";
-import HowItWorks from "@/components/how-it-works/HowItWorks";
+import HowItWorks from "@/components/section-how-it-works/HowItWorks";
+import LearnMore from "@/components/section-learn-more/LearnMore";
 
 const solutionsImage = [
   googleIcon,
@@ -145,6 +146,7 @@ export default function Home() {
         </div>
       </div>
       <HowItWorks title="Web-Development" collection={itemsList} />
+      <LearnMore />
     </div>
   );
 }
