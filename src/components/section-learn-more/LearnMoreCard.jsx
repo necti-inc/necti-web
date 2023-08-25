@@ -4,41 +4,38 @@ import theme from "../../app/theme.js";
 import Link from "next/link";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFolder } from "@fortawesome/free-regular-svg-icons";
 import { faC, faChevronRight } from "@fortawesome/free-solid-svg-icons";
 
 function LearnMoreCard(props) {
   return (
     <div
-      style={{ backgroundColor: theme.white }}
+      style={{ backgroundColor: theme.white, borderColor: theme.grey }}
       className={style.cardContainer}
     >
-      <FontAwesomeIcon
-        style={{ color: theme.primaryColor }}
-        icon={faFolder}
-        className={style.icon}
-      />
-      <h2 style={{ color: theme.black }} className={style.solutionTitleCard}>
-        {props.title}
-      </h2>
-      <p
-        style={{ color: theme.darkGrey }}
-        className={style.solutionSubTitleCard}
-      >
-        {props.description}
-      </p>
-      {/* <Link
-        style={{ color: theme.primaryColor }}
-        className={style.textButton}
-        href={props.path}
-      >
-        {props.title}
+      <Link className={style.textButton} href={props.path}>
+        <FontAwesomeIcon
+          style={{ color: theme.black }}
+          icon={props.iconName}
+          className={style.icon}
+        />
+        <h2 style={{ color: theme.black }} className={style.solutionTitleCard}>
+          {props.title}
+        </h2>
+        <p
+          style={{ color: theme.darkGrey }}
+          className={style.solutionSubTitleCard}
+        >
+          {props.description}
+        </p>
+        <div className={style.lowerButtonContainer}>
+          <p className={style.lowerButton}>{props.lowerButton}</p>
+          <FontAwesomeIcon
+            style={{ color: theme.primaryColor }}
+            icon={faChevronRight}
+            className={style.iconBottom}
+          />
+        </div>
       </Link>
-      <FontAwesomeIcon
-        style={{ color: theme.primaryColor }}
-        icon={faChevronRight}
-        className={style.textButtonIcon}
-      /> */}
     </div>
   );
 }

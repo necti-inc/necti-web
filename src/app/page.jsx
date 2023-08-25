@@ -20,6 +20,8 @@ import htmlIcon from "../../public/icons/html-icon.png";
 import test from "../../public/what-we-do-seperator.png";
 import HowItWorks from "@/components/section-how-it-works/HowItWorks";
 import LearnMore from "@/components/section-learn-more/LearnMore";
+import BrowseBySolution from "@/components/section-browse-by-solution/BrowseBySolution";
+import MoreInfo from "@/components/section-more-info/MoreInfo";
 
 const solutionsImage = [
   googleIcon,
@@ -113,6 +115,8 @@ export default function Home() {
           ))}
         </div>
       </div>
+      <MoreInfo />
+
       <div className={style.ourWorkContainer}>
         <h2 style={{ color: theme.black }} className={style.ourWorkHeader}>
           Our Work
@@ -143,10 +147,12 @@ export default function Home() {
               appealing, highly functional, and easy to use.
             </p>
           </div>
+          <ViewAllButton title="Get in touch" path="/contact" />
         </div>
       </div>
       <HowItWorks title="Web-Development" collection={itemsList} />
       <LearnMore />
+      <BrowseBySolution />
     </div>
   );
 }

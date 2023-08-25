@@ -1,0 +1,67 @@
+.container {
+  padding: 100px;
+}
+
+.bySolutionCardContainer {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 35px;
+}
+
+.solutionTitle {
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.allButtonContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+/* By Solution Card Style */
+.cardContainer {
+  width: 270px;
+  height: 270px;
+  border-radius: 10px;
+  position: relative;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 80px;
+}
+
+.cardContainer:hover {
+  border-width: 0px;
+  background-color: #ffffff;
+  cursor: pointer;
+  box-shadow: 2px 10px 40px #dbdee1;
+}
+
+.cardTitle {
+  font-size: 28px;
+}
+
+.cardDescription {
+  font-size: 18px;
+  font-weight: 400;
+  padding-top: 10px;
+}
+
+.lowerButtonContainer {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  padding-bottom: 20px;
+}
+
+.lowerButton {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.iconBottom {
+  height: 12px;
+  margin-left: 5px;
+  margin-top: 1px;
+  width: auto;
+}
