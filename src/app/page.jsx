@@ -22,6 +22,7 @@ import HowItWorks from "@/components/section-how-it-works/HowItWorks";
 import LearnMore from "@/components/section-learn-more/LearnMore";
 import BrowseBySolution from "@/components/section-browse-by-solution/BrowseBySolution";
 import MoreInfo from "@/components/section-more-info/MoreInfo";
+import SectionPackages from "@/components/section-packages/SectionPackages";
 
 const solutionsImage = [
   googleIcon,
@@ -153,6 +154,7 @@ export default function Home() {
       <HowItWorks title="Web-Development" collection={itemsList} />
       <LearnMore />
       <BrowseBySolution />
+      <SectionPackages/>
     </div>
   );
 }
