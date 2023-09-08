@@ -1,0 +1,66 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+/* Card Component Style */
+.cardContainer {
+  width: 410px;
+  height: 220px;
+  border-radius: 10px;
+  border-width: 1px;
+  border-style: solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 30px;
+  padding-right: 30px;
+  position: relative;
+}
+
+.cardContainer:hover {
+  border-width: 0px;
+  cursor: pointer;
+  box-shadow: 2px 10px 40px #dbdee1;
+}
+
+.solutionTitleCard {
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 12px;
+}
+
+.solutionSubTitleCard {
+  margin-top: 8px;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 300;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+}
+
+.lowerButtonContainer {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  padding-bottom: 15px;
+}
+
+.lowerButton {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.iconBottom {
+  height: 12px;
+  margin-left: 5px;
+  margin-top: 1px;
+  width: auto;
+}

@@ -19,10 +19,19 @@
   width: 100%;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
-  background-color: thistle;
+}
+
+.imageElement {
+  /* background-image: url("/picture-it-mobile-site.png"); */
+  background-size: cover;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  height: 300px;
+  width: 100%;
 }
 
 .titleContainer {
+  border-top: 1px solid;
   position: relative;
   padding-left: 20px;
   padding-top: 4%;
