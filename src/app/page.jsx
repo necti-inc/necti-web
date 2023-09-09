@@ -18,6 +18,8 @@ import Solutions from "@/sections/section-solutions/Solutions";
 import OurSolutions from "@/sections/section-our-solutions/OurSolutions";
 import OurWork from "@/sections/section-our-work/OurWork";
 
+import { faCheck, faDollarSign } from "@fortawesome/free-solid-svg-icons";
+
 const itemsList = [
   [
     "Design",
@@ -28,6 +30,16 @@ const itemsList = [
     "Deploy",
     "Once development is complete you will be able to choose the best hosting plan for you.",
   ],
+];
+
+const webPackageList = [
+  ["Website Design", theme.lightGrey, faCheck],
+  ["Website Development", theme.white, faCheck],
+  ["Website Hosting", theme.lightGrey, faCheck],
+  ["Website Maintenance", theme.white, faDollarSign],
+  ["Website Analytics", theme.lightGrey, faDollarSign],
+  ["Business Email Setup", theme.white, faDollarSign],
+  ["Business Socials Setup", theme.lightGrey, faDollarSign],
 ];
 
 export default function Home() {
@@ -42,7 +54,15 @@ export default function Home() {
       <HowItWorks title="Web-Development" collection={itemsList} />
       <LearnMore />
       <BrowseBySolution />
-      <SectionPackages />
+      <SectionPackages
+        priceOne="$50/mo"
+        priceTwo="$100/mo"
+        titleOne="Starter"
+        titleTwo="Premium"
+        packages={webPackageList}
+        showBorder={true}
+        buttonText="Discover more packages"
+      />
       <ContactOurTeam />
     </div>
   );
