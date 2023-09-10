@@ -1,0 +1,27 @@
+.container {
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  margin-top: 20px;
+  padding-bottom: 80px;
+  padding-top: 80px;
+}
+.header {
+  font-size: 35px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.subTitle {
+  margin-top: 15px;
+  font-size: 18px;
+  text-align: center;
+  line-height: 28px;
+}
+
+.solutionsContainer {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 5%;
+  padding-right: 5%;
+  margin-top: 80px;
+}

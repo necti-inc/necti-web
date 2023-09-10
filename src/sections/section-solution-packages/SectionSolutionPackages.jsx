@@ -7,6 +7,8 @@ import theme from "@/app/theme";
 import SectionPackages from "../section-packages/SectionPackages";
 
 import { faCheck, faDollarSign } from "@fortawesome/free-solid-svg-icons";
+import SectionSolutionALaCarte from "../section-solution-alacarte/SectionSolutionALaCarte";
+import HowItWorks from "../section-how-it-works/HowItWorks";
 
 function SectionSolutionPackages() {
   const [activePackageList, setActivePackageList] = useState([
@@ -18,6 +20,25 @@ function SectionSolutionPackages() {
     ["Business Email Setup", theme.white, faDollarSign],
     ["Business Socials Setup", theme.lightGrey, faDollarSign],
   ]);
+
+  const [activeSolutionList, setActiveSolutionList] = useState([
+    ["SEO Optimization", "Web Development", "$35/mo"],
+    ["Copywriting", "Web Development", "$100"],
+    ["CRM Dashboard", "Web Development", "$35/mo"],
+  ]);
+
+  const [activeHowItWorksList, setActiveHowItWorksList] = useState([
+    [
+      "Design",
+      "Choose from 100s of high quality themes. Or create your own unique theme.",
+    ],
+    ["Develop", "Once you have chosen a theme. We will begin development. "],
+    [
+      "Deploy",
+      "Once development is complete you will be able to choose the best hosting plan for you.",
+    ],
+  ]);
+
   const [activePriceOne, setActivePriceOne] = useState("$50/mo");
   const [activePriceTwo, setActivePriceTwo] = useState("$100/mo");
 
@@ -81,6 +102,25 @@ function SectionSolutionPackages() {
         ["Business Email Setup", theme.white, faDollarSign],
         ["Business Socials Setup", theme.lightGrey, faDollarSign],
       ]);
+      setActiveSolutionList([
+        ["SEO Optimization", "Web Development", "$35/mo"],
+        ["Copywriting", "Web Development", "$100"],
+        ["CRM Dashboard", "Web Development", "$35/mo"],
+      ]);
+      setActiveHowItWorksList([
+        [
+          "Design",
+          "Choose from 100s of high quality themes. Or create your own unique theme.",
+        ],
+        [
+          "Develop",
+          "Once you have chosen a theme. We will begin development. ",
+        ],
+        [
+          "Deploy",
+          "Once development is complete you will be able to choose the best hosting plan for you.",
+        ],
+      ]);
       setActivePriceOne("$50/mo");
       setActivePriceTwo("$100/mo");
     } else if (title === "Marketing") {
@@ -101,6 +141,11 @@ function SectionSolutionPackages() {
         ["Hashtag Curation", theme.white, faDollarSign],
         ["Monthly Analytics Report", theme.lightGrey, faDollarSign],
         ["2 Story Posts", theme.white, faDollarSign],
+      ]);
+      setActiveSolutionList([
+        ["SEO Optimization", "Web Development", "$35/mo"],
+        ["Copywriting", "Web Development", "$100"],
+        ["CRM Dashboard", "Web Development", "$35/mo"],
       ]);
       setActivePriceOne("$150/mo");
       setActivePriceTwo("$300/mo");
@@ -193,6 +238,8 @@ function SectionSolutionPackages() {
           buttonText="Contact us today"
         />
       </div>
+      <SectionSolutionALaCarte solutions={activeSolutionList} />
+      <HowItWorks title="Web-Development" collection={activeHowItWorksList} />
     </div>
   );
 }
