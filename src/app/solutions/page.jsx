@@ -8,7 +8,6 @@ const Solutions = () => {
     <div>
       <SectionSolutionHeader />
       <SectionSolutionPackages />
-      {/* <SectionSolutionALaCarte /> */}
     </div>
   );
 };
