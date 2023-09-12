@@ -32,15 +32,15 @@ const itemsList = [
   ],
 ];
 
-const webPackageList = [
-  ["Website Design", theme.lightGrey, faCheck],
-  ["Website Development", theme.white, faCheck],
-  ["Website Hosting", theme.lightGrey, faCheck],
-  ["Website Maintenance", theme.white, faDollarSign],
-  ["Website Analytics", theme.lightGrey, faDollarSign],
-  ["Business Email Setup", theme.white, faDollarSign],
-  ["Business Socials Setup", theme.lightGrey, faDollarSign],
-];
+// const webPackageList = [
+//   ["Website Design", theme.lightGrey, faCheck],
+//   ["Website Development", theme.white, faCheck],
+//   ["Website Hosting", theme.lightGrey, faCheck],
+//   ["Website Maintenance", theme.white, faDollarSign],
+//   ["Website Analytics", theme.lightGrey, faDollarSign],
+//   ["Business Email Setup", theme.white, faDollarSign],
+//   ["Business Socials Setup", theme.lightGrey, faDollarSign],
+// ];
 
 export default function Home() {
   return (
