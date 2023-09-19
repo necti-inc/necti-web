@@ -1,0 +1,61 @@
+.container {
+  margin-top: 100px;
+  margin-bottom: 80px;
+}
+
+.header {
+  font-size: 50px;
+  text-align: center;
+}
+
+.subHeader {
+  width: 50%;
+  font-size: 16px;
+  margin: 12px auto;
+  text-align: center;
+}
+
+.iconOuterContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 50px;
+}
+
+.iconContainer {
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+}
+
+.dashedLine {
+  border-top: dashed 1px black;
+  width: 275px;
+}
+
+.textOuterContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 900px;
+}
+
+.textContainer {
+  width: 230px;
+}
+
+.header2 {
+  font-size: 17px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.description {
+  font-size: 14px;
+  text-align: center;
+  line-height: 18px;
+  margin-top: 5px;
+}
+
+.buttonContainer {
+  margin-top: 60px;
+}

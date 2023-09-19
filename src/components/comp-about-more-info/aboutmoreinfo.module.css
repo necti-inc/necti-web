@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 12%;
+  padding-right: 12%;
+}
+
+.description {
+  width: 500px;
+  line-height: 30px;
+  margin-top: 8px;
+}
+
+.header {
+  font-size: 40px;
+  width: 500px;
+  padding-bottom: 5px;
+}
+
+.imageSize {
+  width: auto;
+  height: 550px;
+}

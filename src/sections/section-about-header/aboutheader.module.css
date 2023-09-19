@@ -1,0 +1,27 @@
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid;
+}
+
+.aboutHeader {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.subHeader {
+  margin-top: 5px;
+  font-size: 18px;
+  width: 600px;
+  line-height: 28px;
+}
+
+.headerImage {
+  width: auto;
+  height: 575px;
+  padding-top: 30px;
+}
