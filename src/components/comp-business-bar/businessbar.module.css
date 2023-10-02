@@ -29,6 +29,11 @@
   margin-right: 5px;
 }
 
+.containerItem {
+  display: flex;
+  flex-direction: column;
+}
+
 .icon {
   height: 13px;
   width: auto;

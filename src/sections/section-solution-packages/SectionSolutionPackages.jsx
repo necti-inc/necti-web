@@ -11,6 +11,12 @@ import SectionSolutionALaCarte from "../section-solution-alacarte/SectionSolutio
 import HowItWorks from "../section-how-it-works/HowItWorks";
 
 function SectionSolutionPackages() {
+  const [isWebsiteHovered, setIsWebsiteHovered] = useState(false);
+  const [isMarketingHovered, setIsMarketingHovered] = useState(false);
+  const [isBusinessSetupHovered, setIsBusinessSetupHovered] = useState(false);
+  const [isAutomationHovered, setIsAutomationHovered] = useState(false);
+  const [isEComHovered, setIsEComHovered] = useState(false);
+
   const [activePackageList, setActivePackageList] = useState([
     ["Website Design", theme.lightGrey, faCheck],
     ["Website Development", theme.white, faCheck],
@@ -190,42 +196,62 @@ function SectionSolutionPackages() {
         <SolutionTile
           onPress={buttonClick}
           backgroundColor={activeColorWeb[0]}
-          titleColor={activeColorWeb[1]}
+          titleColor={isWebsiteHovered ? theme.primaryColor : activeColorWeb[1]}
           borderColor={activeColorWeb[2]}
           fontWeight={activeColorWeb[3]}
           title="Website"
+          mouseEnter={() => setIsWebsiteHovered(true)}
+          mouseLeave={() => setIsWebsiteHovered(false)}
         />
         <SolutionTile
           onPress={buttonClick}
           backgroundColor={activeColorMarketing[0]}
-          titleColor={activeColorMarketing[1]}
+          titleColor={
+            isMarketingHovered ? theme.primaryColor : activeColorMarketing[1]
+          }
           borderColor={activeColorMarketing[2]}
           fontWeight={activeColorMarketing[3]}
           title="Marketing"
+          mouseEnter={() => setIsMarketingHovered(true)}
+          mouseLeave={() => setIsMarketingHovered(false)}
         />
         <SolutionTile
           onPress={buttonClick}
           backgroundColor={activeColorBusinessSetup[0]}
-          titleColor={activeColorBusinessSetup[1]}
+          titleColor={
+            isBusinessSetupHovered
+              ? theme.primaryColor
+              : activeColorBusinessSetup[1]
+          }
           borderColor={activeColorBusinessSetup[2]}
           fontWeight={activeColorBusinessSetup[3]}
           title="Business Setup"
+          mouseEnter={() => setIsBusinessSetupHovered(true)}
+          mouseLeave={() => setIsBusinessSetupHovered(false)}
         />
         <SolutionTile
           onPress={buttonClick}
           backgroundColor={activeColorAutomation[0]}
-          titleColor={activeColorAutomation[1]}
+          titleColor={
+            isAutomationHovered ? theme.primaryColor : activeColorAutomation[1]
+          }
           borderColor={activeColorAutomation[2]}
           fontWeight={activeColorAutomation[3]}
           title="Automation"
+          mouseEnter={() => setIsAutomationHovered(true)}
+          mouseLeave={() => setIsAutomationHovered(false)}
         />
         <SolutionTile
           onPress={buttonClick}
           backgroundColor={activeColorEcommerce[0]}
-          titleColor={activeColorEcommerce[1]}
+          titleColor={
+            isEComHovered ? theme.primaryColor : activeColorEcommerce[1]
+          }
           borderColor={activeColorEcommerce[2]}
           fontWeight={activeColorEcommerce[3]}
           title="E-Commerce"
+          mouseEnter={() => setIsEComHovered(true)}
+          mouseLeave={() => setIsEComHovered(false)}
         />
       </div>
       <div className={style.packageContainer}>

@@ -13,7 +13,7 @@ import instagramIcon from "../../../public/icons/instagram-icon.png";
 import reactIcon from "../../../public/icons/react-icon.png";
 import yelpIcon from "../../../public/icons/yelp-icon.png";
 import htmlIcon from "../../../public/icons/html-icon.png";
-
+import Link from "next/link";
 
 const solutionsImage = [
   googleIcon,
@@ -34,12 +34,14 @@ function Solutions() {
       className={style.solutionContainer}
     >
       <div className={style.leftItem}>
-        <button
-          style={{ color: theme.black, borderColor: theme.black }}
-          className="buttonSlim"
-        >
-          100+ Solutions
-        </button>
+        <Link href={"/solutions"}>
+          <button
+            style={{ color: theme.black, borderColor: theme.black }}
+            className="buttonSlim"
+          >
+            100+ Solutions
+          </button>
+        </Link>
         <h2 style={{ color: theme.black }} className={style.solutionTitle}>
           Digital solutions that drive website traffic and help your business
           succeed

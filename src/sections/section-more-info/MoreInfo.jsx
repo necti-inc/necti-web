@@ -2,6 +2,8 @@ import React from "react";
 import style from "./moreinfo.module.css";
 import theme from "@/app/theme";
 import MoreInfoCheckDown from "./MoreInfoCheckDown";
+import Image from "next/image";
+import MoreInfoImage from "../../../public/home-more-info.png";
 
 const itemsList = [
   [
@@ -32,20 +34,25 @@ const itemsList = [
 
 function MoreInfo() {
   return (
-    <div
-      className={style.container}
-      style={{
-        borderColor: theme.grey,
-        backgroundImage: 'url("/more-info-background.png")',
-        backgroundSize: "auto 100%",
-        backgroundPosition: "right center",
-        backgroundRepeat: "no-repeat",
-        width: "100%",
-      }}
-    >
-      <div className={style.leftContainer}></div>
+    <div style={{ borderColor: theme.grey }} className={style.container}>
+      <div className={style.leftContainer}>
+        <Image
+          className={style.imageSize}
+          src={MoreInfoImage}
+          alt="More Info Image"
+        />
+      </div>
 
-      <div className={style.rightContainer}>
+      <div
+        style={{
+          borderColor: theme.grey,
+          backgroundImage: 'url("/more-info-background.png")',
+          backgroundSize: "170% 80%",
+          backgroundPosition: "right center",
+          backgroundRepeat: "no-repeat",
+        }}
+        className={style.rightContainer}
+      >
         <h2 className={style.title} style={{ color: theme.black }}>
           <span style={{ color: theme.primaryColor }}>$0</span> down,{" "}
           <span style={{ color: theme.primaryColor }}>$100</span> per month,{" "}

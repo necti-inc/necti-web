@@ -5,7 +5,10 @@ import HowItWorksCard from "./HowItWorksCard";
 
 function HowItWorks(props) {
   return (
-    <div className={style.container}>
+    <div
+      style={{ backgroundColor: theme.lightGrey }}
+      className={style.container}
+    >
       <div>
         <h2 style={{ color: theme.black }} className={style.solutionTitle}>
           How necti Works

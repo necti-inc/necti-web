@@ -7,7 +7,7 @@ import { faFolder } from "@fortawesome/free-regular-svg-icons";
 function HowItWorksCard(props) {
   return (
     <div
-      style={{ backgroundColor: theme.lightGrey }}
+      style={{ backgroundColor: theme.white }}
       className={style.cardContainer}
     >
       <FontAwesomeIcon

@@ -4,7 +4,11 @@ import theme from "@/app/theme";
 
 function SolutionTile(props) {
   return (
-    <button onClick={() => props.onPress(props.title)}>
+    <button
+      onClick={() => props.onPress(props.title)}
+      onMouseEnter={props.mouseEnter}
+      onMouseLeave={props.mouseLeave}
+    >
       <div
         style={{
           backgroundColor: props.backgroundColor,

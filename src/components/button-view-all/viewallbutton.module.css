@@ -6,6 +6,9 @@
   
   .textButton {
     font-weight: 600;
+    display: flex;
+    margin-top: 20px;
+    gap: 5px;
   }
   
   .textButtonIcon {

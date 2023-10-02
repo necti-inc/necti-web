@@ -1,10 +1,21 @@
-import React from "react";
+"use client";
+
+import React, { useState, useEffect } from "react";
 import style from "./aboutquality.module.css";
 import theme from "@/app/theme";
 import AboutQualityIcon from "@/components/comp-about-quality-icon/AboutQualityIcon";
 import ViewAllButton from "@/components/button-view-all/ViewAllButton";
+import Link from "next/link";
 
 function AboutQuality() {
+  const [isHovered, setIsHovered] = useState(false);
+
+  const buttonStyle = {
+    backgroundColor: isHovered ? theme.black : theme.primaryColor,
+    color: isHovered ? theme.white : theme.black,
+    transition: "background-color 0.3s, color 0.3s",
+  };
+
   return (
     <div className={style.container}>
       <div>
@@ -51,12 +62,16 @@ function AboutQuality() {
           </div>
         </div>
         <div className={style.buttonContainer}>
-          <button
-            style={{ backgroundColor: theme.primaryColor, color: theme.black }}
-            className="buttonDark"
-          >
-            Our services
-          </button>
+          <Link href={"/solutions"}>
+            <button
+              style={buttonStyle}
+              className="buttonDark"
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
+            >
+              Our services
+            </button>
+          </Link>
         </div>
       </div>
     </div>

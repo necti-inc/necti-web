@@ -52,6 +52,7 @@ function OurWorkItems() {
             <OurWorkBox
               devType="Web Development"
               businessName="pictureitmobile.com"
+              route="https://www.pictureitmobile.com"
             />
           </div>
         ))}

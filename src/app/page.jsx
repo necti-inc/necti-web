@@ -48,21 +48,20 @@ export default function Home() {
       <HomeHeader />
       <Solutions />
       <MoreInfo />
-      <OurWork />
-      <BusinessBar />
-      <OurSolutions />
-      <HowItWorks title="Web-Development" collection={itemsList} />
-      <LearnMore />
-      <BrowseBySolution />
       <SectionPackages
         priceOne="$50/mo"
         priceTwo="$100/mo"
         titleOne="Starter"
         titleTwo="Premium"
         packages={webPackageList}
-        showBorder={true}
+        showBorder={false}
         buttonText="Discover more packages"
       />
+      <HowItWorks title="Web-Development" collection={itemsList} />
+      <OurWork />
+      <BusinessBar />
+      <LearnMore />
+      <BrowseBySolution />
       <ContactOurTeam />
     </div>
   );

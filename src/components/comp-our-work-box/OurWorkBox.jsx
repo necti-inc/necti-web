@@ -12,21 +12,23 @@ function OurWorkBox(props) {
       }}
       className={style.container}
     >
-      <div
-        style={{ backgroundColor: theme.lightGrey }}
-        className={style.imageContainer}
-      >
-        <div className={style.imageElement}></div>
-      </div>
-      <div
-        style={{ borderColor: theme.white }}
-        className={style.titleContainer}
-      >
-        <p className={style.name}>{props.businessName}</p>
-        <p className={style.type} style={{ color: theme.darkGrey }}>
-          {props.devType}
-        </p>
-      </div>
+      <a href={props.route} target="_blank">
+        <div
+          style={{ backgroundColor: theme.lightGrey }}
+          className={style.imageContainer}
+        >
+          <div className={style.imageElement}></div>
+        </div>
+        <div
+          style={{ borderColor: theme.white }}
+          className={style.titleContainer}
+        >
+          <p className={style.name}>{props.businessName}</p>
+          <p className={style.type} style={{ color: theme.darkGrey }}>
+            {props.devType}
+          </p>
+        </div>
+      </a>
     </div>
   );
 }

@@ -4,7 +4,6 @@ import theme from "../../app/theme.js";
 import BySolutionCard from "./BySolutionCard";
 import ViewAllButton from "@/components/button-view-all/ViewAllButton";
 
-
 const itemsList = [
   [
     "Web",
@@ -30,7 +29,7 @@ const itemsList = [
 
 function BrowseBySolution() {
   return (
-    <div className={style.container}>
+    <div style={{ borderColor: theme.grey }} className={style.container}>
       <h2 style={{ color: theme.black }} className={style.solutionTitle}>
         Browse by Solution
       </h2>
