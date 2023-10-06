@@ -1,0 +1,70 @@
+.footerContainer {
+    padding-top: 70px;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.bodyContainer {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 100px;
+}
+
+.title {
+    font-size: 60px;
+}
+
+.subTitle {
+    font-size: 20px;
+}
+
+.description {
+    font-size: 18px;
+}
+
+.titleContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.contentContainer {
+    display: flex;
+    gap: 50px;
+}
+
+.divider {
+    width: 100%;
+    border-top: 1px solid;
+    padding-bottom: 35px;
+}
+
+.lowerContainer {
+    padding-bottom: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.copyRightText {
+    font-size: 16px;
+}
+
+.icon {
+    font-size: 20px;
+}
+
+.iconBox {
+    display: flex;
+    gap: 15px;
+
+}
+
+.iconContainer {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+}
