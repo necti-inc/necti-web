@@ -1,0 +1,65 @@
+.container {
+    padding: 100px 150px;
+    display: flex;
+}
+
+.title {
+    font-size: 58px;
+    font-weight: bold;
+}
+
+.leftContainer {
+    width: 40%;
+}
+
+.subtitle {
+    font-size: 16px;
+    margin-top: 2px;
+}
+
+.iconBox {
+    display: flex;
+}
+
+.icon {
+    height: 20px;
+    width: auto;
+    margin-right: 10px;
+    margin-top: 2px;
+}
+
+.subText {
+    font-size: 15px;
+}
+
+.keyTextContainer {
+    width: 80%;
+    border-radius: 12px;
+    padding: 20px 25px;
+    margin-top: 25px;
+}
+
+.divider {
+    border-top: 1px solid;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.callText {
+    margin-top: 15px;
+}
+
+.rightContainer {
+    width: 50%;
+
+}
+
+.topContainer {
+    display: flex;
+    gap: 20px;
+}
+
+.bottomContainer {
+    display: flex;
+    flex-direction: column;
+}

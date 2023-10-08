@@ -12,6 +12,7 @@
 
 .title {
     font-size: 60px;
+    margin-left: 5%;
 }
 
 .subTitle {
@@ -31,6 +32,7 @@
 .contentContainer {
     display: flex;
     gap: 50px;
+    margin-right: 5%;
 }
 
 .divider {
@@ -50,8 +52,9 @@
     font-size: 16px;
 }
 
-.icon {
-    font-size: 20px;
+.footerIcon {
+    width: auto;
+    height: 20px;
 }
 
 .iconBox {

@@ -1,0 +1,55 @@
+.header {
+    font-size: 22px;
+    text-align: center;
+}
+
+.customerQuote {
+    font-size: 28px;
+    margin-top: 15px;
+    text-align: center;
+    padding-left: 300px;
+    padding-right: 300px;
+}
+
+.container {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    margin-left: 100px;
+    margin-right: 100px;
+    border-top: 1px solid;
+}
+
+.customerImage {
+    width: 70px;
+    height: auto;
+}
+
+.customersImage {
+    width: 35%;
+    height: auto;
+    margin-top: 15px;
+}
+
+.imageContainer {
+    display: flex;
+    justify-content: center;
+    padding-left: 200px;
+    padding-right: 200px;
+}
+
+.customerInfoContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.customerName {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.customerTitle {
+    font-size: 16px;
+    font-weight: 400;
+}

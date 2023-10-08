@@ -68,7 +68,7 @@ const Footer = () => {
           >
             <FontAwesomeIcon
               style={{ color: theme.white }}
-              className={style.icon}
+              className={style.footerIcon}
               icon={faInstagram}
             />
           </div>
@@ -78,7 +78,7 @@ const Footer = () => {
           >
             <FontAwesomeIcon
               style={{ color: theme.white }}
-              className={style.icon}
+              className={style.footerIcon}
               icon={faFacebookF}
             />
           </div>

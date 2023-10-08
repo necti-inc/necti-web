@@ -1,0 +1,46 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 85.5%;
+    margin: 10px 10px 2px;
+
+}
+
+.label {
+    font-weight: 400;
+    margin-bottom: 5px;
+    font-family: inherit;
+}
+
+.dropdown {
+    padding: 10px;
+    border: 1.5px solid;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.icon {
+    margin-left: 10px;
+}
+
+.menu {
+    border: 1.5px solid;
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 5px;
+    list-style-type: none;
+    padding: 0;
+    font-weight: 500;
+}
+
+.menu li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.menu li:hover {
+    background-color: #eee;
+}
