@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import style from "./sectioncontactform.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
@@ -8,7 +10,16 @@ import Divider from "@/sections/section-contact-form/Divider";
 import SmallTextInput from "@/components/comp-small-text-input/SmallTextInput";
 import LargeTextInput from "@/components/comp-large-text-input/LargeTextInput";
 import PlanDropdown from "@/components/comp-drop-down/PlanDropdown";
+import Link from "next/link";
 function SectionContactForm() {
+  const [isHovered, setIsHovered] = useState(false);
+
+  const buttonStyle = {
+    backgroundColor: isHovered ? theme.primaryColor : theme.black,
+    color: isHovered ? theme.black : theme.white,
+    transition: "background-color 0.3s, color 0.3s",
+  };
+
   return (
     <div className={style.container}>
       <div className={style.leftContainer}>
@@ -69,6 +80,22 @@ function SectionContactForm() {
             title={"Anything else?"}
             placeholder={"I need a nice website."}
           />
+        </div>
+        <div>
+          <p style={{ color: theme.darkGrey }} className={style.warningText}>
+            Fields marked with asterisk ( * ) are required.
+          </p>
+          <Link href={"/contact"}>
+            <button
+              // style={{ backgroundColor: theme.black, color: theme.white }}
+              style={buttonStyle}
+              className={style.buttonDark}
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
+            >
+              Submit
+            </button>
+          </Link>
         </div>
       </div>
     </div>
