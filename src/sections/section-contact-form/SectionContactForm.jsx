@@ -1,6 +1,8 @@
 "use client";
 
 import React, { useState } from "react";
+import { collection, addDoc } from "firebase/firestore";
+import { db } from "../../utils/firebase";
 import style from "./sectioncontactform.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
@@ -12,12 +14,39 @@ import LargeTextInput from "@/components/comp-large-text-input/LargeTextInput";
 import PlanDropdown from "@/components/comp-drop-down/PlanDropdown";
 import Link from "next/link";
 function SectionContactForm() {
+  const [firstNameValue, setFirstnameValue] = useState("");
+  const [lastNameValue, setLastNameValue] = useState("");
+  const [emailValue, setEmailValue] = useState("");
+  const [companyNameValue, setCompanyNameValue] = useState("");
+  const [industryNameValue, setIndustryNameValue] = useState("");
+  const [anythingElseValue, setAnythingElseValue] = useState("");
+  const [planValue, setPlanValue] = useState("");
+
   const [isHovered, setIsHovered] = useState(false);
 
   const buttonStyle = {
     backgroundColor: isHovered ? theme.primaryColor : theme.black,
     color: isHovered ? theme.black : theme.white,
     transition: "background-color 0.3s, color 0.3s",
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    try {
+      await addDoc(collection(db, "online-inquiries"), {
+        firstName: firstNameValue,
+        lastName: lastNameValue,
+        email: emailValue,
+        companyName: companyNameValue,
+        industry: industryNameValue,
+        plan: planValue,
+        anythingElse: anythingElseValue,
+      });
+      console.log("Successful");
+    } catch (e) {
+      console.error("Error: ", e);
+    }
   };
 
   return (
@@ -62,30 +91,60 @@ function SectionContactForm() {
         </p>
       </div>
       <div className={style.rightContainer}>
-        <div className={style.topContainer}>
-          <SmallTextInput title={"First name *"} placeholder={"John"} />
-          <SmallTextInput title={"Last name *"} placeholder={"Smith"} />
-        </div>
-        <div className={style.bottomContainer}>
-          <LargeTextInput
-            title={"Email *"}
-            placeholder={"johnsmith@gmail.com"}
-          />
-          <LargeTextInput
-            title={"Company name *"}
-            placeholder={"J's Cleaning"}
-          />
-          <PlanDropdown />
-          <LargeTextInput
-            title={"Anything else?"}
-            placeholder={"I need a nice website."}
-          />
-        </div>
-        <div>
-          <p style={{ color: theme.darkGrey }} className={style.warningText}>
-            Fields marked with asterisk ( * ) are required.
-          </p>
-          <Link href={"/contact"}>
+        <form onSubmit={handleSubmit}>
+          <div className={style.topContainer}>
+            <SmallTextInput
+              title={"First name *"}
+              placeholder={"John"}
+              value={firstNameValue}
+              onChange={(e) => setFirstnameValue(e.target.value)}
+              required={true}
+            />
+            <SmallTextInput
+              title={"Last name *"}
+              placeholder={"Smith"}
+              value={lastNameValue}
+              onChange={(e) => setLastNameValue(e.target.value)}
+              required={true}
+            />
+          </div>
+          <div className={style.bottomContainer}>
+            <LargeTextInput
+              title={"Email *"}
+              placeholder={"johnsmith@gmail.com"}
+              value={emailValue}
+              onChange={(e) => setEmailValue(e.target.value)}
+              required={true}
+            />
+            <LargeTextInput
+              title={"Company name *"}
+              placeholder={"J's Extermination"}
+              value={companyNameValue}
+              onChange={(e) => setCompanyNameValue(e.target.value)}
+              required={true}
+            />
+            <LargeTextInput
+              title={"Industry *"}
+              placeholder={"Pest Control"}
+              value={industryNameValue}
+              onChange={(e) => setIndustryNameValue(e.target.value)}
+              required={true}
+            />
+            <PlanDropdown
+              value={planValue}
+              onChange={(plan) => setPlanValue(plan)}
+            />
+            <LargeTextInput
+              title={"Anything else?"}
+              placeholder={"I need a nice website."}
+              value={anythingElseValue}
+              onChange={(e) => setAnythingElseValue(e.target.value)}
+            />
+          </div>
+          <div>
+            <p style={{ color: theme.darkGrey }} className={style.warningText}>
+              Fields marked with asterisk ( * ) are required.
+            </p>
             <button
               // style={{ backgroundColor: theme.black, color: theme.white }}
               style={buttonStyle}
@@ -95,8 +154,8 @@ function SectionContactForm() {
             >
               Submit
             </button>
-          </Link>
-        </div>
+          </div>
+        </form>
       </div>
     </div>
   );

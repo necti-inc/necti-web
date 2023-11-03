@@ -1,13 +1,19 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import style from "./largetextinput.module.css";
 import theme from "@/app/theme";
 
 function LargeTextInput(props) {
+  const [inputValue, setInputValue] = useState(props.value || "");
   const [isTyping, setIsTyping] = useState(false);
 
+  useEffect(() => {
+    setInputValue(props.value);
+  }, [props.value]);
+
   const handleInputChange = (e) => {
+    setInputValue(e.target.value);
     if (e.target.value) {
       setIsTyping(true);
     } else {
@@ -27,10 +33,15 @@ function LargeTextInput(props) {
           fontFamily: "inherit",
         }}
         className={style.input}
-        id="firstName"
+        id={props.title}
         type="text"
         placeholder={props.placeholder}
-        onChange={handleInputChange}
+        value={inputValue}
+        onChange={(e) => {
+          handleInputChange(e);
+          props.onChange && props.onChange(e);
+        }}
+        required={props.required}
       />
     </div>
   );

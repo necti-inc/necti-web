@@ -6,7 +6,8 @@ import theme from "@/app/theme";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
-const PlanDropdown = () => {
+const PlanDropdown = (props) => {
+  const currentPlan = props.value || "Please select...";
   const [isOpen, setIsOpen] = useState(false);
   const [selectedPlan, setSelectedPlan] = useState([
     "Please select...",
@@ -21,11 +22,12 @@ const PlanDropdown = () => {
   const handleOptionClick = (plan, fontWeight, color) => {
     setSelectedPlan([plan, fontWeight, color]);
     setIsOpen(false);
+    props.onChange && props.onChange(plan);
   };
 
   return (
     <div className={style.container}>
-      <label className={style.label}>Plan *</label>
+      <label className={style.label}>Plan</label>
       <div
         style={{ borderColor: theme.grey }}
         className={style.dropdown}
