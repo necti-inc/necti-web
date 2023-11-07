@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import style from "./plandropdown.module.css";
 import theme from "@/app/theme";
 
@@ -10,7 +10,7 @@ const PlanDropdown = (props) => {
   const currentPlan = props.value || "Please select...";
   const [isOpen, setIsOpen] = useState(false);
   const [selectedPlan, setSelectedPlan] = useState([
-    "Please select...",
+    props.value,
     400,
     theme.darkGrey,
   ]);
@@ -24,6 +24,12 @@ const PlanDropdown = (props) => {
     setIsOpen(false);
     props.onChange && props.onChange(plan);
   };
+
+  useEffect(() => {
+    if (props.value === "reset") {
+      setSelectedPlan(["Please select...", 400, theme.darkGrey]);
+    }
+  }, [props.value]);
 
   return (
     <div className={style.container}>

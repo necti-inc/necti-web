@@ -13,15 +13,19 @@ import SmallTextInput from "@/components/comp-small-text-input/SmallTextInput";
 import LargeTextInput from "@/components/comp-large-text-input/LargeTextInput";
 import PlanDropdown from "@/components/comp-drop-down/PlanDropdown";
 import Link from "next/link";
+import FormSubmission from "@/sections/section-form-submission/FormSubmission";
 function SectionContactForm() {
-  const [firstNameValue, setFirstnameValue] = useState("");
-  const [lastNameValue, setLastNameValue] = useState("");
-  const [emailValue, setEmailValue] = useState("");
-  const [companyNameValue, setCompanyNameValue] = useState("");
-  const [industryNameValue, setIndustryNameValue] = useState("");
-  const [anythingElseValue, setAnythingElseValue] = useState("");
-  const [planValue, setPlanValue] = useState("");
+  const [firstNameValue, setFirstnameValue] = useState(["", true]);
+  const [lastNameValue, setLastNameValue] = useState(["", true]);
+  const [emailValue, setEmailValue] = useState(["", true]);
+  const [companyNameValue, setCompanyNameValue] = useState(["", true]);
+  const [industryNameValue, setIndustryNameValue] = useState(["", true]);
+  const [anythingElseValue, setAnythingElseValue] = useState(["", true]);
+  const [planValue, setPlanValue] = useState("Please select...");
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [successState, setSuccessState] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
 
   const buttonStyle = {
@@ -30,27 +34,97 @@ function SectionContactForm() {
     transition: "background-color 0.3s, color 0.3s",
   };
 
+  const isValidEmail = (email) => {
+    // Simple regex for email validation
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(email);
+  };
+
   const handleSubmit = async (event) => {
     event.preventDefault();
+    setIsSubmitting(true);
 
-    try {
-      await addDoc(collection(db, "online-inquiries"), {
-        firstName: firstNameValue,
-        lastName: lastNameValue,
-        email: emailValue,
-        companyName: companyNameValue,
-        industry: industryNameValue,
-        plan: planValue,
-        anythingElse: anythingElseValue,
-      });
-      console.log("Successful");
-    } catch (e) {
-      console.error("Error: ", e);
+    let isValid = true; // Assume everything is valid initially
+
+    // // Check first name
+    // if (!firstNameValue[0].trim()) {
+    //   setFirstnameValue([firstNameValue[0], false]);
+    //   isValid = false;
+    // }
+    //
+    // // Check last name
+    // if (!lastNameValue[0].trim()) {
+    //   setLastNameValue([lastNameValue[0], false]);
+    //   isValid = false;
+    // }
+    //
+    // // Check email (both for emptiness and valid format)
+    // if (!emailValue[0].trim() || !isValidEmail(emailValue[0])) {
+    //   setEmailValue([emailValue[0], false]);
+    //   isValid = false;
+    // }
+    //
+    // // Check company name
+    // if (!companyNameValue[0].trim()) {
+    //   setCompanyNameValue([companyNameValue[0], false]);
+    //   isValid = false;
+    // }
+    //
+    // // Check industry name
+    // if (!industryNameValue[0].trim()) {
+    //   setIndustryNameValue([industryNameValue[0], false]);
+    //   isValid = false;
+    // }
+
+    // If everything is valid, continue with submission
+    if (isValid) {
+      setTimeout(async () => {
+        setIsSubmitting(false);
+        setIsSubmitted(true);
+
+        try {
+          throw new Error("Simulated failure.");
+          // await addDoc(collection(db, "online-inquiries"), {
+          //   firstName: firstNameValue[0],
+          //   lastName: lastNameValue[0],
+          //   email: emailValue[0],
+          //   companyName: companyNameValue[0],
+          //   industry: industryNameValue[0],
+          //   plan: planValue,
+          //   anythingElse: anythingElseValue[0],
+          // });
+          setFirstnameValue(["reset", true]);
+          setLastNameValue(["reset", true]);
+          setEmailValue(["reset", true]);
+          setCompanyNameValue(["reset", true]);
+          setIndustryNameValue(["reset", true]);
+          setPlanValue("reset");
+          setAnythingElseValue(["reset", true]);
+
+          console.log("Successful");
+          setSuccessState(true);
+          setTimeout(() => {
+            setIsSubmitted(false);
+          }, 5000);
+        } catch (e) {
+          console.error("Error: ", e);
+          setSuccessState(false);
+          setTimeout(() => {
+            setIsSubmitted(false);
+          }, 10000);
+        }
+      }, 3000);
     }
   };
 
   return (
     <div className={style.container}>
+      {isSubmitting || isSubmitted ? (
+        <FormSubmission submitted={isSubmitted} successState={successState} />
+      ) : (
+        ""
+      )}
+
       <div className={style.leftContainer}>
         <h1 className={style.title}>
           Contact our
@@ -96,39 +170,39 @@ function SectionContactForm() {
             <SmallTextInput
               title={"First name *"}
               placeholder={"John"}
-              value={firstNameValue}
-              onChange={(e) => setFirstnameValue(e.target.value)}
-              required={true}
+              value={firstNameValue[0]}
+              onChange={(e) => setFirstnameValue([e.target.value, true])}
+              isValid={firstNameValue[1]}
             />
             <SmallTextInput
               title={"Last name *"}
               placeholder={"Smith"}
-              value={lastNameValue}
-              onChange={(e) => setLastNameValue(e.target.value)}
-              required={true}
+              value={lastNameValue[0]}
+              onChange={(e) => setLastNameValue([e.target.value, true])}
+              isValid={lastNameValue[1]}
             />
           </div>
           <div className={style.bottomContainer}>
             <LargeTextInput
               title={"Email *"}
               placeholder={"johnsmith@gmail.com"}
-              value={emailValue}
-              onChange={(e) => setEmailValue(e.target.value)}
-              required={true}
+              value={emailValue[0]}
+              onChange={(e) => setEmailValue([e.target.value, true])}
+              isValid={emailValue[1]}
             />
             <LargeTextInput
               title={"Company name *"}
               placeholder={"J's Extermination"}
-              value={companyNameValue}
-              onChange={(e) => setCompanyNameValue(e.target.value)}
-              required={true}
+              value={companyNameValue[0]}
+              onChange={(e) => setCompanyNameValue([e.target.value, true])}
+              isValid={companyNameValue[1]}
             />
             <LargeTextInput
               title={"Industry *"}
               placeholder={"Pest Control"}
-              value={industryNameValue}
-              onChange={(e) => setIndustryNameValue(e.target.value)}
-              required={true}
+              value={industryNameValue[0]}
+              onChange={(e) => setIndustryNameValue([e.target.value, true])}
+              isValid={industryNameValue[1]}
             />
             <PlanDropdown
               value={planValue}
@@ -137,8 +211,9 @@ function SectionContactForm() {
             <LargeTextInput
               title={"Anything else?"}
               placeholder={"I need a nice website."}
-              value={anythingElseValue}
-              onChange={(e) => setAnythingElseValue(e.target.value)}
+              value={anythingElseValue[0]}
+              onChange={(e) => setAnythingElseValue([e.target.value, true])}
+              isValid={anythingElseValue[1]}
             />
           </div>
           <div>

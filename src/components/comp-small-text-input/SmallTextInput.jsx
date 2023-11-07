@@ -5,11 +5,15 @@ import style from "./smalltextinput.module.css";
 import theme from "@/app/theme";
 
 function SmallTextInput(props) {
-  const [inputValue, setInputValue] = useState(props.value || "");
+  const [inputValue, setInputValue] = useState("");
   const [isTyping, setIsTyping] = useState(false);
 
   useEffect(() => {
     setInputValue(props.value);
+    if (props.value === "reset") {
+      setInputValue("");
+      setIsTyping(false);
+    }
   }, [props.value]);
 
   const handleInputChange = (e) => {
@@ -23,7 +27,10 @@ function SmallTextInput(props) {
 
   return (
     <div className={style.container}>
-      <label style={{ color: theme.black }} className={style.label}>
+      <label
+        style={{ color: props.isValid ? theme.black : theme.error }}
+        className={style.label}
+      >
         {props.title}
       </label>
       <input
