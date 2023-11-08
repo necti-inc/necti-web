@@ -72,10 +72,7 @@
 }
 
 .buttonDark {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding: 10px 30px;
     border: none;
     border-radius: 8px;
     font-size: 18px;

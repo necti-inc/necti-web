@@ -11,7 +11,7 @@ const theme = {
   lightGrey: "#F8F8F8",
   grey: "#E5E5E5",
   darkGrey: "#838383",
-  error: "#FF0000",
+  error: "#FF4444",
 };
 
 export default theme;

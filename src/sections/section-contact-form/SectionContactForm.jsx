@@ -1,23 +1,21 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { collection, addDoc } from "firebase/firestore";
-import { db } from "../../utils/firebase";
+import { db } from "@/utils/firebase";
 import style from "./sectioncontactform.module.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import theme from "@/app/theme";
 import IconBox from "@/sections/section-contact-form/IconBox";
 import Divider from "@/sections/section-contact-form/Divider";
 import SmallTextInput from "@/components/comp-small-text-input/SmallTextInput";
 import LargeTextInput from "@/components/comp-large-text-input/LargeTextInput";
 import PlanDropdown from "@/components/comp-drop-down/PlanDropdown";
-import Link from "next/link";
 import FormSubmission from "@/sections/section-form-submission/FormSubmission";
 function SectionContactForm() {
   const [firstNameValue, setFirstnameValue] = useState(["", true]);
   const [lastNameValue, setLastNameValue] = useState(["", true]);
   const [emailValue, setEmailValue] = useState(["", true]);
+  const [phoneNumberValue, setPhoneNumberValue] = useState(["", true]);
   const [companyNameValue, setCompanyNameValue] = useState(["", true]);
   const [industryNameValue, setIndustryNameValue] = useState(["", true]);
   const [anythingElseValue, setAnythingElseValue] = useState(["", true]);
@@ -25,8 +23,9 @@ function SectionContactForm() {
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const [successState, setSuccessState] = useState(false);
+  const [successState, setSuccessState] = useState(true);
   const [isHovered, setIsHovered] = useState(false);
+  const timeoutRef = useRef(null);
 
   const buttonStyle = {
     backgroundColor: isHovered ? theme.primaryColor : theme.black,
@@ -40,87 +39,107 @@ function SectionContactForm() {
     return regex.test(email);
   };
 
+  const clearSubmissionState = () => {
+    setIsSubmitted(false);
+    setSuccessState(false);
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+      timeoutRef.current = null;
+    }
+  };
+
   const handleSubmit = async (event) => {
     event.preventDefault();
-    setIsSubmitting(true);
+    let isValid = true;
 
-    let isValid = true; // Assume everything is valid initially
+    // Check first name
+    if (!firstNameValue[0].trim()) {
+      setFirstnameValue([firstNameValue[0], false]);
+      isValid = false;
+    }
 
-    // // Check first name
-    // if (!firstNameValue[0].trim()) {
-    //   setFirstnameValue([firstNameValue[0], false]);
-    //   isValid = false;
-    // }
-    //
-    // // Check last name
-    // if (!lastNameValue[0].trim()) {
-    //   setLastNameValue([lastNameValue[0], false]);
-    //   isValid = false;
-    // }
-    //
-    // // Check email (both for emptiness and valid format)
-    // if (!emailValue[0].trim() || !isValidEmail(emailValue[0])) {
-    //   setEmailValue([emailValue[0], false]);
-    //   isValid = false;
-    // }
-    //
-    // // Check company name
-    // if (!companyNameValue[0].trim()) {
-    //   setCompanyNameValue([companyNameValue[0], false]);
-    //   isValid = false;
-    // }
-    //
-    // // Check industry name
-    // if (!industryNameValue[0].trim()) {
-    //   setIndustryNameValue([industryNameValue[0], false]);
-    //   isValid = false;
-    // }
+    // Check last name
+    if (!lastNameValue[0].trim()) {
+      setLastNameValue([lastNameValue[0], false]);
+      isValid = false;
+    }
+
+    // Check email (both for emptiness and valid format)
+    if (!emailValue[0].trim() || !isValidEmail(emailValue[0])) {
+      setEmailValue([emailValue[0], false]);
+      isValid = false;
+    }
+
+    // Check company name
+    if (!companyNameValue[0].trim()) {
+      setCompanyNameValue([companyNameValue[0], false]);
+      isValid = false;
+    }
+
+    // Check industry name
+    if (!industryNameValue[0].trim()) {
+      setIndustryNameValue([industryNameValue[0], false]);
+      isValid = false;
+    }
+
+    // Check phone number value
+    if (
+      !phoneNumberValue[0].trim() ||
+      phoneNumberValue[0].length !== 10 ||
+      !/^\d{10}$/.test(phoneNumberValue[0])
+    ) {
+      setPhoneNumberValue([phoneNumberValue[0], false]);
+      isValid = false;
+    }
 
     // If everything is valid, continue with submission
     if (isValid) {
+      setIsSubmitting(true);
       setTimeout(async () => {
         setIsSubmitting(false);
         setIsSubmitted(true);
-
         try {
-          throw new Error("Simulated failure.");
-          // await addDoc(collection(db, "online-inquiries"), {
-          //   firstName: firstNameValue[0],
-          //   lastName: lastNameValue[0],
-          //   email: emailValue[0],
-          //   companyName: companyNameValue[0],
-          //   industry: industryNameValue[0],
-          //   plan: planValue,
-          //   anythingElse: anythingElseValue[0],
-          // });
+          await addDoc(collection(db, "online-inquiries"), {
+            firstName: firstNameValue[0],
+            lastName: lastNameValue[0],
+            email: emailValue[0],
+            phoneNumber: phoneNumberValue[0],
+            companyName: companyNameValue[0],
+            industry: industryNameValue[0],
+            plan: planValue,
+            anythingElse: anythingElseValue[0],
+          });
           setFirstnameValue(["reset", true]);
           setLastNameValue(["reset", true]);
           setEmailValue(["reset", true]);
+          setPhoneNumberValue(["reset", true]);
           setCompanyNameValue(["reset", true]);
           setIndustryNameValue(["reset", true]);
           setPlanValue("reset");
           setAnythingElseValue(["reset", true]);
 
-          console.log("Successful");
           setSuccessState(true);
           setTimeout(() => {
             setIsSubmitted(false);
-          }, 5000);
+          }, 3000);
         } catch (e) {
-          console.error("Error: ", e);
           setSuccessState(false);
-          setTimeout(() => {
+          timeoutRef.current = setTimeout(() => {
             setIsSubmitted(false);
-          }, 10000);
+          }, 8000);
         }
-      }, 3000);
+      }, 2000);
     }
   };
 
   return (
     <div className={style.container}>
       {isSubmitting || isSubmitted ? (
-        <FormSubmission submitted={isSubmitted} successState={successState} />
+        <FormSubmission
+          submitted={isSubmitted}
+          successState={successState}
+          clearState={clearSubmissionState}
+        />
       ) : (
         ""
       )}
@@ -170,6 +189,7 @@ function SectionContactForm() {
             <SmallTextInput
               title={"First name *"}
               placeholder={"John"}
+              type={"text"}
               value={firstNameValue[0]}
               onChange={(e) => setFirstnameValue([e.target.value, true])}
               isValid={firstNameValue[1]}
@@ -177,19 +197,31 @@ function SectionContactForm() {
             <SmallTextInput
               title={"Last name *"}
               placeholder={"Smith"}
+              type={"text"}
               value={lastNameValue[0]}
               onChange={(e) => setLastNameValue([e.target.value, true])}
               isValid={lastNameValue[1]}
             />
           </div>
-          <div className={style.bottomContainer}>
-            <LargeTextInput
+          <div className={style.topContainer}>
+            <SmallTextInput
               title={"Email *"}
               placeholder={"johnsmith@gmail.com"}
+              type={"email"}
               value={emailValue[0]}
               onChange={(e) => setEmailValue([e.target.value, true])}
               isValid={emailValue[1]}
             />
+            <SmallTextInput
+              title={"Phone Number *"}
+              placeholder={"951-987-0981"}
+              type={"tel"}
+              value={phoneNumberValue[0]}
+              onChange={(e) => setPhoneNumberValue([e.target.value, true])}
+              isValid={phoneNumberValue[1]}
+            />
+          </div>
+          <div className={style.bottomContainer}>
             <LargeTextInput
               title={"Company name *"}
               placeholder={"J's Extermination"}

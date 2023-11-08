@@ -41,7 +41,7 @@ function SmallTextInput(props) {
         }}
         className={style.input}
         id={props.title}
-        type="text"
+        type={props.type}
         placeholder={props.placeholder}
         value={inputValue}
         onChange={(e) => {
