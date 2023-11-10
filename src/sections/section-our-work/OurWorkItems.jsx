@@ -7,7 +7,7 @@ import theme from "@/app/theme";
 import OurWorkBox from "@/components/comp-our-work-box/OurWorkBox";
 import ViewAllButton from "@/components/button-view-all/ViewAllButton";
 
-function OurWorkItems() {
+function OurWorkItems(props) {
   const [activeColorWeb, setActiveColorWeb] = useState([
     theme.black,
     theme.primaryColor,
@@ -47,15 +47,25 @@ function OurWorkItems() {
         />
       </div>
       <div className={style.ourWorkCardsContainer}>
-        {Array.from({ length: 6 }).map((_, index) => (
+        {props.work.map((item, index) => (
           <div key={index}>
             <OurWorkBox
-              devType="Web Development"
-              businessName="pictureitmobile.com"
-              route="https://www.pictureitmobile.com"
+              devType={item[0]}
+              businessName={item[1]}
+              route={item[2]}
+              image={item[3]}
             />
           </div>
         ))}
+        {/*{Array.from({ length: 6 }).map((_, index) => (*/}
+        {/*  <div key={index}>*/}
+        {/*    <OurWorkBox*/}
+        {/*      devType="Web Development"*/}
+        {/*      businessName="pictureitmobile.com"*/}
+        {/*      route="https://www.pictureitmobile.com"*/}
+        {/*    />*/}
+        {/*  </div>*/}
+        {/*))}*/}
       </div>
       <div className={style.lowerButtonContainer}>
         <ViewAllButton title="View all work" path="/work" />

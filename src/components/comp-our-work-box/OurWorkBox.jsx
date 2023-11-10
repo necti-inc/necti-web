@@ -1,23 +1,25 @@
 import React from "react";
 import style from "./ourworkbox.module.css";
 import theme from "@/app/theme";
+import Image from "next/image";
 
 function OurWorkBox(props) {
   return (
     <div
       style={{
         borderColor: theme.grey,
-        transition: "border-color 0.3s", // Adding transition for smooth effect
-        ":hover": { borderColor: "transparent" }, // Applying hover effect to remove border color
+        transition: "border-color 0.3s",
+        ":hover": { borderColor: "transparent" },
       }}
       className={style.container}
     >
       <a href={props.route} target="_blank">
-        <div
-          style={{ backgroundColor: theme.lightGrey }}
-          className={style.imageContainer}
-        >
-          <div className={style.imageElement}></div>
+        <div className={style.imageContainer}>
+          <Image
+            className={style.imageElement}
+            src={props.image}
+            alt={props.businessName}
+          />
         </div>
         <div
           style={{ borderColor: theme.white }}
