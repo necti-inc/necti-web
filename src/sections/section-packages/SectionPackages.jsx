@@ -33,15 +33,32 @@ function SectionPackages(props) {
           textColor={theme.lightGrey}
           optionTitle={props.titleTwo}
         />
+        {props.titleThree != null ? (
+          <PricingOption
+            price={props.priceThree}
+            color={theme.black}
+            textColor={theme.white}
+            optionTitle={props.titleThree}
+          />
+        ) : (
+          ""
+        )}
       </div>
       <div>
-        <LineCriteriaHeader />
+        <LineCriteriaHeader
+          descriptionOne={props.descriptionOne}
+          descriptionTwo={props.descriptionTwo}
+          descriptionThree={props.descriptionThree}
+          optionThree={props.priceThree}
+        />
         {props.packages.map((item, index) => (
           <div key={index}>
             <LineCriteria
               title={item[0]}
               backgroundColor={item[1]}
               iconType={item[2]}
+              iconTwoType={item[3]}
+              optionThree={props.priceThree}
             />
           </div>
         ))}

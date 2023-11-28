@@ -4,6 +4,7 @@
   padding-bottom: 80px;
   padding-top: 80px;
 }
+
 .header {
   font-size: 35px;
   font-weight: bold;
@@ -19,9 +20,15 @@
 
 .solutionsContainer {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap; /* Allows items to wrap onto the next line */
+  align-items: flex-start; /* Aligns items to the start of the line */
+  justify-content: flex-start; /* Aligns items to the left */
   gap: 100px;
   padding-left: 5%;
   padding-right: 5%;
   margin-top: 80px;
+}
+
+.solutionsContainer > * { /* This targets all child elements */
+  flex: 0 0 29%; /* This sets the basis to 30% and doesn't allow growth or shrink */
 }

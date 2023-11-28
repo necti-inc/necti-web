@@ -19,7 +19,7 @@ function LineCriteriaHeader(props) {
           style={{ color: theme.darkGrey }}
           className={style.criteriaSubHeaderTitle}
         >
-          Forms in about 1 to 2 weeks *
+          {props.descriptionOne}
         </h3>
       </div>
       <div className={style.iconContainer}>
@@ -27,9 +27,21 @@ function LineCriteriaHeader(props) {
           style={{ color: theme.darkGrey }}
           className={style.criteriaSubHeaderTitle}
         >
-          Forms in about 4 to 6 days *
+          {props.descriptionTwo}
         </h3>
       </div>
+      {props.optionThree != null ? (
+        <div className={style.iconContainer}>
+          <h3
+            style={{ color: theme.darkGrey }}
+            className={style.criteriaSubHeaderTitle}
+          >
+            {props.descriptionThree}
+          </h3>
+        </div>
+      ) : (
+        ""
+      )}
     </div>
   );
 }
