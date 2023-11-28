@@ -33,7 +33,7 @@ const PlanDropdown = (props) => {
 
   return (
     <div className={style.container}>
-      <label className={style.label}>Plan</label>
+      <label className={style.label}>{props.title}</label>
       <div
         style={{ borderColor: theme.grey }}
         className={style.dropdown}
@@ -63,25 +63,33 @@ const PlanDropdown = (props) => {
       </div>
       {isOpen && (
         <ul style={{ borderColor: theme.grey }} className={style.menu}>
-          <li
-            onClick={() =>
-              handleOptionClick("Website Starter", 600, theme.black)
-            }
-          >
-            Website Starter
-          </li>
-          <li
-            onClick={() => handleOptionClick("Website Pro", 600, theme.black)}
-          >
-            Website Pro
-          </li>
-          <li
-            onClick={() =>
-              handleOptionClick("Website Advanced", 600, theme.black)
-            }
-          >
-            Website Advanced
-          </li>
+          {props.items.map((item, index) => (
+            <li
+              key={index}
+              onClick={() => handleOptionClick(item, 600, theme.black)}
+            >
+              {item}
+            </li>
+          ))}
+          {/*<li*/}
+          {/*  onClick={() =>*/}
+          {/*    handleOptionClick("Website Starter", 600, theme.black)*/}
+          {/*  }*/}
+          {/*>*/}
+          {/*  Website Starter*/}
+          {/*</li>*/}
+          {/*<li*/}
+          {/*  onClick={() => handleOptionClick("Website Pro", 600, theme.black)}*/}
+          {/*>*/}
+          {/*  Website Pro*/}
+          {/*</li>*/}
+          {/*<li*/}
+          {/*  onClick={() =>*/}
+          {/*    handleOptionClick("Website Advanced", 600, theme.black)*/}
+          {/*  }*/}
+          {/*>*/}
+          {/*  Website Advanced*/}
+          {/*</li>*/}
         </ul>
       )}
     </div>

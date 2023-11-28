@@ -1,9 +1,12 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
-import styles from "./navbar.module.css";
+import style from "./navbar.module.css";
 import theme from "@/app/theme";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 
 const links = [
   {
@@ -39,18 +42,89 @@ const links = [
 ];
 
 const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+
+    if (!isMenuOpen) {
+      document.body.style.overflow = "hidden"; // Disable scroll on body
+    } else {
+      document.body.style.overflow = "";
+    }
+  };
+
+  const onLinkClick = () => {
+    if (isMenuOpen) {
+      setTimeout(() => {
+        setIsMenuOpen(false);
+        document.body.style.overflow = "";
+      }, 100);
+    } else {
+      setIsMenuOpen(true);
+    }
+  };
+
   return (
-    <div className={styles.container} style={{ backgroundColor: theme.white }}>
-      <Link style={{ color: theme.black }} href={"/"} className={styles.logo}>
+    <div
+      className={style.container}
+      style={{
+        backgroundColor: theme.white,
+        borderColor: isMenuOpen ? theme.grey : "transparent",
+      }}
+    >
+      <Link style={{ color: theme.black }} href={"/"} className={style.logo}>
         necti
       </Link>
-      <div style={{ color: theme.black }} className={styles.links}>
+      <button
+        onClick={toggleMenu}
+        className={style.menuButton}
+        aria-label="Toggle Menu"
+      >
+        {isMenuOpen ? (
+          <FontAwesomeIcon
+            style={{ color: theme.primaryColor }}
+            className={style.mobileButton}
+            icon={faXmark}
+          />
+        ) : (
+          <FontAwesomeIcon
+            style={{ color: theme.primaryColor }}
+            className={style.mobileButton}
+            icon={faBars}
+          />
+        )}
+      </button>
+      <div style={{ color: theme.black }} className={style.links}>
         {links.map((link) => (
-          <Link key={link.id} href={link.url} className={styles.link}>
+          <Link key={link.id} href={link.url} className={style.link}>
             {link.title}
           </Link>
         ))}
       </div>
+      {isMenuOpen && (
+        <div
+          style={{ backgroundColor: theme.white }}
+          className={style.mobileHeader}
+        >
+          {links.map((link) => (
+            <button
+              style={{ borderColor: theme.grey }}
+              className={style.linkMobile}
+              onClick={onLinkClick}
+            >
+              <Link
+                style={{ borderColor: theme.grey }}
+                key={link.id}
+                href={link.url}
+                className={style.linkMobile}
+              >
+                {link.title}
+              </Link>
+            </button>
+          ))}
+        </div>
+      )}
     </div>
   );
 };

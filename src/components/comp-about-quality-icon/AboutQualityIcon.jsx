@@ -15,7 +15,10 @@ function AboutQualityIcon(props) {
             className={style.iconContainerMiddle}
           >
             <div
-              style={{ backgroundColor: theme.primaryColor }}
+              style={{
+                backgroundColor: theme.primaryColor,
+                color: theme.lightGrey,
+              }}
               className={style.iconContainerInner}
             >
               {props.icon}

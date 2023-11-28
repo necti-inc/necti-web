@@ -3,19 +3,18 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* max-width: 1600px; */
-  padding-left: 5%;
   padding-right: 5%;
   margin: 0 auto;
-  /* padding: 0 60px; */
   position: sticky;
   top: 0;
   z-index: 100;
+  /*border-bottom: 1.75px solid;*/
 }
 
 .logo {
   font-weight: 600;
   font-size: 28px;
+  padding-left: 5%;
 }
 
 .links {
@@ -27,4 +26,53 @@
 .link {
   font-size: 16px;
   font-weight: 500;
+}
+
+.linkMobile {
+  font-size: 17px;
+  font-weight: 600;
+  border-bottom: 1.75px solid;
+  width: 90%;
+  text-align: left;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+.mobileHeader {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  align-items: center;
+  top: 114px;
+  width: 100%;
+  height: 100vh;
+  z-index: 99;
+}
+
+.mobileButton {
+  width: 23px;
+  height: 23px;
+}
+
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .links {
+    display: none; /* Hide links and logo on smaller screens */
+  }
+
+  .menuButton {
+    display: flex; /* Show menu button on smaller screens */
+    align-items: center;
+    justify-content: center;
+    font-size: 24px; /* Adjust the size as needed */
+    cursor: pointer;
+  }
+}
+
+/* Desktop styles */
+@media (min-width: 769px) {
+  .menuButton {
+    display: none; /* Hide menu button on larger screens */
+  }
 }

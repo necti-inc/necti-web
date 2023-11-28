@@ -10,6 +10,10 @@ import { faCheck, faDollarSign } from "@fortawesome/free-solid-svg-icons";
 import SectionSolutionALaCarte from "../section-solution-alacarte/SectionSolutionALaCarte";
 import HowItWorks from "../section-how-it-works/HowItWorks";
 
+import CarteSEO from "../../../public/web-carte-seo.png";
+import CarteCopy from "../../../public/web-carte-copy.png";
+import CarteCRM from "../../../public/web-carte-crm.png";
+
 function SectionSolutionPackages() {
   const [isWebsiteHovered, setIsWebsiteHovered] = useState(false);
   const [isMarketingHovered, setIsMarketingHovered] = useState(false);
@@ -28,9 +32,9 @@ function SectionSolutionPackages() {
   ]);
 
   const [activeSolutionList, setActiveSolutionList] = useState([
-    ["SEO Optimization", "Web Development", "$35/mo"],
-    ["Copywriting", "Web Development", "$100"],
-    ["CRM Dashboard", "Web Development", "$35/mo"],
+    ["SEO Optimization", "Web Development", "$35/mo", CarteSEO],
+    ["Copywriting", "Web Development", "$100", CarteCopy],
+    ["CRM Dashboard", "Web Development", "$35/mo", CarteCRM],
   ]);
 
   const [activeHowItWorksList, setActiveHowItWorksList] = useState([
@@ -49,9 +53,9 @@ function SectionSolutionPackages() {
   const [activePriceTwo, setActivePriceTwo] = useState("$100/mo");
 
   const [activeColorWeb, setActiveColorWeb] = useState([
+    theme.primaryColor,
+    theme.lightGrey,
     theme.black,
-    theme.primaryColor,
-    theme.primaryColor,
     600,
   ]);
   const [activeColorMarketing, setActiveColorMarketing] = useState([
@@ -90,9 +94,9 @@ function SectionSolutionPackages() {
   function buttonClick(title) {
     if (title === "Website") {
       setActiveColorWeb([
+        theme.primaryColor,
+        theme.lightGrey,
         theme.black,
-        theme.primaryColor,
-        theme.primaryColor,
         600,
       ]);
       setActiveColorMarketing([theme.white, theme.black, theme.grey, 500]);
@@ -131,9 +135,9 @@ function SectionSolutionPackages() {
       setActivePriceTwo("$100/mo");
     } else if (title === "Marketing") {
       setActiveColorMarketing([
+        theme.primaryColor,
+        theme.lightGrey,
         theme.black,
-        theme.primaryColor,
-        theme.primaryColor,
         600,
       ]);
       setActiveColorWeb([theme.white, theme.black, theme.grey, 500]);
@@ -157,9 +161,9 @@ function SectionSolutionPackages() {
       setActivePriceTwo("$300/mo");
     } else if (title === "Business Setup") {
       setActiveColorBusinessSetup([
+        theme.primaryColor,
+        theme.lightGrey,
         theme.black,
-        theme.primaryColor,
-        theme.primaryColor,
         600,
       ]);
       setActiveColorWeb([theme.white, theme.black, theme.grey, 500]);
@@ -168,9 +172,9 @@ function SectionSolutionPackages() {
       setActiveColorEcommerce([theme.white, theme.black, theme.grey, 500]);
     } else if (title === "Automation") {
       setActiveColorAutomation([
+        theme.primaryColor,
+        theme.lightGrey,
         theme.black,
-        theme.primaryColor,
-        theme.primaryColor,
         600,
       ]);
       setActiveColorWeb([theme.white, theme.black, theme.grey, 500]);
@@ -179,9 +183,9 @@ function SectionSolutionPackages() {
       setActiveColorEcommerce([theme.white, theme.black, theme.grey, 500]);
     } else if (title === "E-Commerce") {
       setActiveColorEcommerce([
+        theme.primaryColor,
+        theme.lightGrey,
         theme.black,
-        theme.primaryColor,
-        theme.primaryColor,
         600,
       ]);
       setActiveColorWeb([theme.white, theme.black, theme.grey, 500]);
@@ -196,8 +200,10 @@ function SectionSolutionPackages() {
         <SolutionTile
           onPress={buttonClick}
           backgroundColor={activeColorWeb[0]}
-          titleColor={isWebsiteHovered ? theme.primaryColor : activeColorWeb[1]}
-          borderColor={activeColorWeb[2]}
+          titleColor={activeColorWeb[1]}
+          borderColor={
+            isWebsiteHovered ? theme.primaryColor : activeColorWeb[2]
+          }
           fontWeight={activeColorWeb[3]}
           title="Website"
           mouseEnter={() => setIsWebsiteHovered(true)}
@@ -206,10 +212,10 @@ function SectionSolutionPackages() {
         <SolutionTile
           onPress={buttonClick}
           backgroundColor={activeColorMarketing[0]}
-          titleColor={
-            isMarketingHovered ? theme.primaryColor : activeColorMarketing[1]
+          titleColor={activeColorMarketing[1]}
+          borderColor={
+            isMarketingHovered ? theme.primaryColor : activeColorMarketing[2]
           }
-          borderColor={activeColorMarketing[2]}
           fontWeight={activeColorMarketing[3]}
           title="Marketing"
           mouseEnter={() => setIsMarketingHovered(true)}
@@ -218,12 +224,12 @@ function SectionSolutionPackages() {
         <SolutionTile
           onPress={buttonClick}
           backgroundColor={activeColorBusinessSetup[0]}
-          titleColor={
+          titleColor={activeColorBusinessSetup[1]}
+          borderColor={
             isBusinessSetupHovered
               ? theme.primaryColor
-              : activeColorBusinessSetup[1]
+              : activeColorBusinessSetup[2]
           }
-          borderColor={activeColorBusinessSetup[2]}
           fontWeight={activeColorBusinessSetup[3]}
           title="Business Setup"
           mouseEnter={() => setIsBusinessSetupHovered(true)}
@@ -232,10 +238,10 @@ function SectionSolutionPackages() {
         <SolutionTile
           onPress={buttonClick}
           backgroundColor={activeColorAutomation[0]}
-          titleColor={
-            isAutomationHovered ? theme.primaryColor : activeColorAutomation[1]
+          titleColor={activeColorAutomation[1]}
+          borderColor={
+            isAutomationHovered ? theme.primaryColor : activeColorAutomation[2]
           }
-          borderColor={activeColorAutomation[2]}
           fontWeight={activeColorAutomation[3]}
           title="Automation"
           mouseEnter={() => setIsAutomationHovered(true)}
@@ -244,10 +250,10 @@ function SectionSolutionPackages() {
         <SolutionTile
           onPress={buttonClick}
           backgroundColor={activeColorEcommerce[0]}
-          titleColor={
-            isEComHovered ? theme.primaryColor : activeColorEcommerce[1]
+          titleColor={activeColorEcommerce[1]}
+          borderColor={
+            isEComHovered ? theme.primaryColor : activeColorEcommerce[2]
           }
-          borderColor={activeColorEcommerce[2]}
           fontWeight={activeColorEcommerce[3]}
           title="E-Commerce"
           mouseEnter={() => setIsEComHovered(true)}

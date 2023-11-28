@@ -5,14 +5,7 @@ import Image from "next/image";
 
 function OurWorkBox(props) {
   return (
-    <div
-      style={{
-        borderColor: theme.grey,
-        transition: "border-color 0.3s",
-        ":hover": { borderColor: "transparent" },
-      }}
-      className={style.container}
-    >
+    <div style={{ backgroundColor: theme.black }} className={style.container}>
       <a href={props.route} target="_blank">
         <div className={style.imageContainer}>
           <Image
@@ -21,11 +14,10 @@ function OurWorkBox(props) {
             alt={props.businessName}
           />
         </div>
-        <div
-          style={{ borderColor: theme.white }}
-          className={style.titleContainer}
-        >
-          <p className={style.name}>{props.businessName}</p>
+        <div className={style.titleContainer}>
+          <p style={{ color: theme.white }} className={style.name}>
+            {props.businessName}
+          </p>
           <p className={style.type} style={{ color: theme.darkGrey }}>
             {props.devType}
           </p>

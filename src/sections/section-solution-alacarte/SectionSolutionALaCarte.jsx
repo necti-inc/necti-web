@@ -20,6 +20,7 @@ function SectionSolutionALaCarte(props) {
               businessName={item[0]}
               devType={item[1]}
               price={item[2]}
+              image={item[3]}
             />
           </div>
         ))}

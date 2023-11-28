@@ -71,3 +71,69 @@
     align-items: center;
     border-radius: 30px;
 }
+
+.dividerMobile {
+    display: none;
+    width: 100%;
+    border-top: 1px solid;
+    padding-bottom: 35px;
+}
+
+/* Existing CSS */
+/* ... */
+
+/* Mobile Styling */
+@media (max-width: 850px) { /* Adjust this breakpoint as needed */
+    .bodyContainer {
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 50px; /* Adjusted for mobile */
+    }
+
+    .title {
+        margin-left: 0; /* Removes the left margin on mobile */
+        font-size: 50px; /* Smaller font size for mobile */
+        text-align: center; /* Center the title if needed */
+        margin-bottom: 10px;
+    }
+
+    .subTitle {
+        font-size: 17px;
+    }
+
+    .description {
+        font-size: 14px;
+    }
+
+    .dividerMobile {
+        display: revert;
+        width: 50%;
+    }
+
+    .divider {
+        display: none;
+    }
+
+    .contentContainer {
+        /*flex-direction: column;*/
+        gap: 30px; /* Reduced gap for mobile */
+        margin-right: 0; /* Removes the right margin on mobile */
+        align-items: top; /* Aligns content to the center */
+        text-align: center;
+    }
+
+    .titleContainer {
+        /* If needed, add specific styles for titleContainer on mobile */
+    }
+
+    .lowerContainer {
+        flex-direction: column; /* Stacks elements vertically */
+        gap: 20px; /* Adds a gap between elements */
+    }
+
+    .iconBox {
+        justify-content: center; /* Centers the icons */
+    }
+}
+
+/* Additional mobile-specific styles can be added as needed */

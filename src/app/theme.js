@@ -1,9 +1,9 @@
 // theme.js
 
 const theme = {
-  primaryColor: "#FF7F11",
-  lightPrimaryColor: "#FFD4AE",
-  mediumPrimaryColor: "#FFA354",
+  primaryColor: "#4169E1",
+  lightPrimaryColor: "#C0CDF5",
+  mediumPrimaryColor: "#7290E9",
   black: "#272727",
   submittingBlack: "rgba(39,39,39,0.8)",
   lightBlack: "#454545",

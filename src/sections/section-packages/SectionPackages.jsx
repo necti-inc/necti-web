@@ -30,7 +30,7 @@ function SectionPackages(props) {
         <PricingOption
           price={props.priceTwo}
           color={theme.primaryColor}
-          textColor={theme.black}
+          textColor={theme.lightGrey}
           optionTitle={props.titleTwo}
         />
       </div>

@@ -12,7 +12,7 @@ function AboutQuality() {
 
   const buttonStyle = {
     backgroundColor: isHovered ? theme.black : theme.primaryColor,
-    color: isHovered ? theme.white : theme.black,
+    color: isHovered ? theme.white : theme.lightGrey,
     transition: "background-color 0.3s, color 0.3s",
   };
 
@@ -54,6 +54,46 @@ function AboutQuality() {
             </p>
           </div>
           <div className={style.textContainer}>
+            <h3 className={style.header2}>No Limits on Design</h3>
+            <p className={style.description}>
+              We can edit the design to cater to your tastes. Everything is
+              customizable!
+            </p>
+          </div>
+        </div>
+        <div className={style.buttonContainer}>
+          <Link href={"/solutions"}>
+            <button
+              style={buttonStyle}
+              className="buttonDark"
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
+            >
+              Our services
+            </button>
+          </Link>
+        </div>
+      </div>
+      <div className={style.iconOuterContainerMobile}>
+        <div className={style.textOuterContainer}>
+          <div className={style.textContainer}>
+            <AboutQualityIcon icon={"1"} />
+            <h3 className={style.header2}>No Pre-Written Content</h3>
+            <p className={style.description}>
+              We write unique and engaging content around your company. Everyone
+              is unique!
+            </p>
+          </div>
+          <div className={style.textContainer}>
+            <AboutQualityIcon icon={"2"} />
+            <h3 className={style.header2}>Customer Service</h3>
+            <p className={style.description}>
+              No automated systems - When you need help the lead developer
+              answers your call.
+            </p>
+          </div>
+          <div className={style.textContainer}>
+            <AboutQualityIcon icon={"3"} />
             <h3 className={style.header2}>No Limits on Design</h3>
             <p className={style.description}>
               We can edit the design to cater to your tastes. Everything is

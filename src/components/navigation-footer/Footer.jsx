@@ -14,6 +14,10 @@ const Footer = () => {
         <h2 style={{ color: theme.white }} className={style.title}>
           necti
         </h2>
+        <div
+          style={{ color: theme.darkGrey }}
+          className={style.dividerMobile}
+        />
         <div className={style.contentContainer}>
           <div className={style.titleContainer}>
             <h3 style={{ color: theme.white }} className={style.subTitle}>

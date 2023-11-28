@@ -20,12 +20,16 @@ function SectionContactForm() {
   const [industryNameValue, setIndustryNameValue] = useState(["", true]);
   const [anythingElseValue, setAnythingElseValue] = useState(["", true]);
   const [planValue, setPlanValue] = useState("Please select...");
+  const [carteValue, setCarteValue] = useState("Please select...");
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [successState, setSuccessState] = useState(true);
   const [isHovered, setIsHovered] = useState(false);
   const timeoutRef = useRef(null);
+
+  const planValues = ["Website Starter", "Website Pro", "Website Advanced"];
+  const carteValues = ["SEO Optimization", "Copy Writing", "CRM Dashboard"];
 
   const buttonStyle = {
     backgroundColor: isHovered ? theme.primaryColor : theme.black,
@@ -238,7 +242,15 @@ function SectionContactForm() {
             />
             <PlanDropdown
               value={planValue}
+              title={"Solution Package"}
               onChange={(plan) => setPlanValue(plan)}
+              items={planValues}
+            />
+            <PlanDropdown
+              value={carteValue}
+              title={"A La Carte Solution"}
+              onChange={(plan) => setCarteValue(plan)}
+              items={carteValues}
             />
             <LargeTextInput
               title={"Anything else?"}

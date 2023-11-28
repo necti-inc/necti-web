@@ -57,15 +57,6 @@ function OurWorkItems(props) {
             />
           </div>
         ))}
-        {/*{Array.from({ length: 6 }).map((_, index) => (*/}
-        {/*  <div key={index}>*/}
-        {/*    <OurWorkBox*/}
-        {/*      devType="Web Development"*/}
-        {/*      businessName="pictureitmobile.com"*/}
-        {/*      route="https://www.pictureitmobile.com"*/}
-        {/*    />*/}
-        {/*  </div>*/}
-        {/*))}*/}
       </div>
       <div className={style.lowerButtonContainer}>
         <ViewAllButton title="View all work" path="/work" />
