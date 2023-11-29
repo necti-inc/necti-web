@@ -51,8 +51,13 @@
     margin-top: 20px;
 }
 
-.rightContainer {
+.rightContainerWeb {
     width: 50%;
+}
+
+.rightContainerMobile {
+    width: 100%;
+    display: none;
 }
 
 .topContainer {
@@ -96,4 +101,48 @@
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+}
+
+@media only screen and (max-width: 1300px) {
+    .container {
+        flex-direction: column;
+        padding: 50px 100px;
+    }
+
+    .keyTextContainer {
+        width: 100%;
+    }
+
+    .leftContainer {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+    .rightContainerWeb {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .rightContainerWeb {
+        display: none;
+    }
+
+    .rightContainerMobile {
+        display: revert;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .container {
+        padding: 30px 50px;
+    }
+
+    .title {
+        font-size: 48px;
+    }
+
+    .subtitle {
+        font-size: 15px;
+    }
 }

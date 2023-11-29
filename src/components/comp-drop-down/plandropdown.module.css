@@ -44,3 +44,9 @@
 .menu li:hover {
     background-color: #eee;
 }
+
+@media only screen and (max-width: 1300px) {
+    .container {
+        width: 98%;
+    }
+}

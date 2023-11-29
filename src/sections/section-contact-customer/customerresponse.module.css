@@ -14,8 +14,6 @@
 .container {
     padding-top: 100px;
     padding-bottom: 100px;
-    margin-left: 100px;
-    margin-right: 100px;
     border-top: 1px solid;
 }
 
@@ -25,7 +23,7 @@
 }
 
 .customersImage {
-    width: 35%;
+    width: 400px;
     height: auto;
     margin-top: 15px;
 }
@@ -52,4 +50,76 @@
 .customerTitle {
     font-size: 16px;
     font-weight: 400;
+}
+
+@media only screen and (max-width: 1200px) {
+    .header {
+        font-size: 19px;
+    }
+
+    .customerQuote {
+        padding-left: 200px;
+        padding-right: 200px;
+        font-size: 24px;
+    }
+
+    .customerName {
+        font-size: 14px;
+    }
+
+    .customerTitle {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 970px) {
+    .header {
+        font-size: 19px;
+    }
+
+    .customerQuote {
+        padding-left: 150px;
+        padding-right: 150px;
+        font-size: 22px;
+    }
+
+    .customerName {
+        font-size: 14px;
+    }
+
+    .customerTitle {
+        font-size: 14px;
+    }
+
+    .customersImage {
+        width: 350px;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .header {
+        font-size: 18px;
+    }
+
+    .customerQuote {
+        padding-left: 25px;
+        padding-right: 25px;
+        font-size: 20px;
+    }
+
+    .customerName {
+        font-size: 12px;
+    }
+
+    .customerTitle {
+        font-size: 12px;
+    }
+
+    .customersImage {
+        width: 350px;
+    }
+
+    .customerImage {
+        width: 50px;
+    }
 }

@@ -187,7 +187,7 @@ function SectionContactForm() {
           </a>
         </p>
       </div>
-      <div className={style.rightContainer}>
+      <div className={style.rightContainerWeb}>
         <form onSubmit={handleSubmit}>
           <div className={style.topContainer}>
             <SmallTextInput
@@ -225,6 +225,91 @@ function SectionContactForm() {
               isValid={phoneNumberValue[1]}
             />
           </div>
+          <div className={style.bottomContainer}>
+            <LargeTextInput
+              title={"Company name *"}
+              placeholder={"J's Extermination"}
+              value={companyNameValue[0]}
+              onChange={(e) => setCompanyNameValue([e.target.value, true])}
+              isValid={companyNameValue[1]}
+            />
+            <LargeTextInput
+              title={"Industry *"}
+              placeholder={"Pest Control"}
+              value={industryNameValue[0]}
+              onChange={(e) => setIndustryNameValue([e.target.value, true])}
+              isValid={industryNameValue[1]}
+            />
+            <PlanDropdown
+              value={planValue}
+              title={"Solution Package"}
+              onChange={(plan) => setPlanValue(plan)}
+              items={planValues}
+            />
+            <PlanDropdown
+              value={carteValue}
+              title={"A La Carte Solution"}
+              onChange={(plan) => setCarteValue(plan)}
+              items={carteValues}
+            />
+            <LargeTextInput
+              title={"Anything else?"}
+              placeholder={"I need a nice website."}
+              value={anythingElseValue[0]}
+              onChange={(e) => setAnythingElseValue([e.target.value, true])}
+              isValid={anythingElseValue[1]}
+            />
+          </div>
+          <div>
+            <p style={{ color: theme.darkGrey }} className={style.warningText}>
+              Fields marked with asterisk ( * ) are required.
+            </p>
+            <button
+              // style={{ backgroundColor: theme.black, color: theme.white }}
+              style={buttonStyle}
+              className={style.buttonDark}
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
+            >
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
+      <div className={style.rightContainerMobile}>
+        <form onSubmit={handleSubmit}>
+          <LargeTextInput
+            title={"First name *"}
+            placeholder={"John"}
+            type={"text"}
+            value={firstNameValue[0]}
+            onChange={(e) => setFirstnameValue([e.target.value, true])}
+            isValid={firstNameValue[1]}
+          />
+          <LargeTextInput
+            title={"Last name *"}
+            placeholder={"Smith"}
+            type={"text"}
+            value={lastNameValue[0]}
+            onChange={(e) => setLastNameValue([e.target.value, true])}
+            isValid={lastNameValue[1]}
+          />
+          <LargeTextInput
+            title={"Email *"}
+            placeholder={"johnsmith@gmail.com"}
+            type={"email"}
+            value={emailValue[0]}
+            onChange={(e) => setEmailValue([e.target.value, true])}
+            isValid={emailValue[1]}
+          />
+          <LargeTextInput
+            title={"Phone Number *"}
+            placeholder={"951-987-0981"}
+            type={"tel"}
+            value={phoneNumberValue[0]}
+            onChange={(e) => setPhoneNumberValue([e.target.value, true])}
+            isValid={phoneNumberValue[1]}
+          />
           <div className={style.bottomContainer}>
             <LargeTextInput
               title={"Company name *"}
