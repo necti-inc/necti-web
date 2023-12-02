@@ -179,7 +179,7 @@ function SectionContactForm() {
           <br /> sales team
         </h1>
         <p style={{ color: theme.darkGrey }} className={style.subtitle}>
-          Let's explore how necti can assist you.
+          Let&apos;s explore how necti can assist you.
         </p>
         <div
           style={{ backgroundColor: theme.lightGrey }}

@@ -112,10 +112,10 @@ const Navbar = () => {
               style={{ borderColor: theme.grey }}
               className={style.linkMobile}
               onClick={onLinkClick}
+              key={link.id}
             >
               <Link
                 style={{ borderColor: theme.grey }}
-                key={link.id}
                 href={link.url}
                 className={style.linkMobile}
               >
