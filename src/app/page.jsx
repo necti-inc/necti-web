@@ -1,10 +1,5 @@
 import style from "./page.module.css";
 import theme from "./theme";
-import Image from "next/image";
-
-import SolutionBox from "@/components/comp-solution-box/SolutionBox";
-import OurWorkItems from "@/sections/section-our-work/OurWorkItems";
-import ViewAllButton from "@/components/button-view-all/ViewAllButton";
 import BusinessBar from "@/components/comp-business-bar/BusinessBar";
 
 import HowItWorks from "@/sections/section-how-it-works/HowItWorks";
@@ -15,7 +10,6 @@ import SectionPackages from "@/sections/section-packages/SectionPackages";
 import ContactOurTeam from "@/sections/section-contact-our-team/ContactOurTeam";
 import HomeHeader from "@/sections/section-home-header/HomeHeader";
 import Solutions from "@/sections/section-solutions/Solutions";
-import OurSolutions from "@/sections/section-our-solutions/OurSolutions";
 import OurWork from "@/sections/section-our-work/OurWork";
 
 import { faCheck, faDollarSign } from "@fortawesome/free-solid-svg-icons";
@@ -33,13 +27,13 @@ const itemsList = [
 ];
 
 const webPackageList = [
-  ["Website Design", theme.lightGrey, faCheck],
-  ["Website Development", theme.white, faCheck],
-  ["Website Hosting", theme.lightGrey, faCheck],
-  ["Website Maintenance", theme.white, faDollarSign],
-  ["Website Analytics", theme.lightGrey, faDollarSign],
-  ["Business Email Setup", theme.white, faDollarSign],
-  ["Business Socials Setup", theme.lightGrey, faDollarSign],
+  ["Website Design", theme.lightGrey, faCheck, faCheck],
+  ["Website Development", theme.white, faCheck, faCheck],
+  ["Website Hosting", theme.lightGrey, faCheck, faCheck],
+  ["Website Maintenance", theme.white, faDollarSign, faCheck],
+  ["Website Analytics", theme.lightGrey, faDollarSign, faCheck],
+  ["Business Email Setup", theme.white, faDollarSign, faCheck],
+  ["Business Socials Setup", theme.lightGrey, faDollarSign, faCheck],
 ];
 
 export default function Home() {

@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useRef } from "react";
+import axios from "axios";
 import { collection, addDoc } from "firebase/firestore";
 import { db } from "@/utils/firebase";
 import style from "./sectioncontactform.module.css";
@@ -111,6 +112,7 @@ function SectionContactForm() {
             companyName: companyNameValue[0],
             industry: industryNameValue[0],
             plan: planValue,
+            aLaCarte: carteValue,
             anythingElse: anythingElseValue[0],
           });
           setFirstnameValue(["reset", true]);
@@ -120,14 +122,37 @@ function SectionContactForm() {
           setCompanyNameValue(["reset", true]);
           setIndustryNameValue(["reset", true]);
           setPlanValue("reset");
+          setCarteValue("reset");
           setAnythingElseValue(["reset", true]);
 
           setSuccessState(true);
           setTimeout(() => {
             setIsSubmitted(false);
           }, 3000);
+
+          const formData = {
+            firstName: "dylan",
+            lastName: "Guzman",
+            email: "dylanaguzman@gmail.com",
+            phoneNumber: phoneNumberValue[0],
+            companyName: companyNameValue[0],
+            industry: industryNameValue[0],
+            solutionPackage: planValue,
+            aLaCarte: "NAL",
+            anythingElse: anythingElseValue[0],
+          };
+
+          try {
+            await axios.post(
+              "https://us-central1-contact-form-404005.cloudfunctions.net/contact-form-automation",
+              formData
+            );
+          } catch (error) {
+            console.error("Error calling Cloud Function:", error);
+          }
         } catch (e) {
           setSuccessState(false);
+          console.log(e);
           timeoutRef.current = setTimeout(() => {
             setIsSubmitted(false);
           }, 8000);
