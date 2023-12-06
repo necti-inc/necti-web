@@ -131,14 +131,14 @@ function SectionContactForm() {
           }, 3000);
 
           const formData = {
-            firstName: "dylan",
-            lastName: "Guzman",
-            email: "dylanaguzman@gmail.com",
+            firstName: firstNameValue[0],
+            lastName: lastNameValue[0],
+            email: emailValue[0],
             phoneNumber: phoneNumberValue[0],
             companyName: companyNameValue[0],
             industry: industryNameValue[0],
             solutionPackage: planValue,
-            aLaCarte: "NAL",
+            aLaCarte: carteValue,
             anythingElse: anythingElseValue[0],
           };
 
