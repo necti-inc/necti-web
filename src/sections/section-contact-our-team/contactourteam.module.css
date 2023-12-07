@@ -24,3 +24,20 @@
 .lowerContainer {
     height: 50px;
 }
+
+@media only screen and (max-width: 650px) {
+  .title {
+    font-size: 43px;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .subTitle {
+    margin-top: 5px;
+    font-size: 15px;
+    font-weight: 400;
+    text-align: center;
+    line-height: 28px;
+    width: 90%;
+  }
+}

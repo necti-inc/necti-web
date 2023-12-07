@@ -16,11 +16,18 @@ function CompButton(props) {
       <div
         style={{
           backgroundColor: theme.white,
-          borderColor: isHovered ? props.hoverColor : props.activeColor,
+          borderColor: isHovered ? theme.primaryColor : props.activeColor,
         }}
         className={style.buttonContainer}
       >
-        <p>{props.title}</p>
+        <p
+          style={{
+            fontWeight:
+              props.activeColor === theme.primaryColor ? "600" : "normal",
+          }}
+        >
+          {props.title}
+        </p>
       </div>
     </button>
   );

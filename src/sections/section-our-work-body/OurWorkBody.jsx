@@ -12,9 +12,10 @@ function OurWorkBody(props) {
       {props.work.map((item, index) => (
         <div key={index}>
           <OurWorkBoxSmall
-            path={item[0]}
+            devType={item[0]}
             businessName={item[1]}
-            devType={item[2]}
+            path={item[2]}
+            image={item[3]}
           />
         </div>
       ))}

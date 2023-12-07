@@ -3,6 +3,13 @@
     text-align: center;
 }
 
+.headerImage {
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 530px;
+}
+
 .headerContainer {
     padding-top: 150px;
 }
@@ -25,4 +32,41 @@
 
 .bodyContainer {
     height: auto;
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 1000px) {
+
+    .header {
+        font-size: 35px;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .headerContainer {
+        padding-top: 50px;
+    }
+
+    .header {
+        font-size: 30px;
+    }
+
+    .description {
+        margin-top: 10px;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .buttonContainer {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 30px;
+    }
+
+    .headerImage {
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 350px;
+    }
 }

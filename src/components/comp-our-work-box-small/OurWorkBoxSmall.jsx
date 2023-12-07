@@ -1,6 +1,7 @@
 import React from "react";
 import style from "./ourworkboxsmall.module.css";
 import theme from "@/app/theme";
+import Image from "next/image";
 
 function OurWorkBoxSmall(props) {
   return (
@@ -11,11 +12,12 @@ function OurWorkBoxSmall(props) {
       className={style.container}
     >
       <a href={props.path} target="_blank">
-        <div
-          style={{ backgroundColor: theme.white }}
-          className={style.imageContainer}
-        >
-          <div className={style.imageElement}></div>
+        <div className={style.imageContainer}>
+          <Image
+            className={style.imageElement}
+            src={props.image}
+            alt={props.businessName}
+          />
         </div>
         <div className={style.titleContainer}>
           <p className={style.name} style={{ color: theme.white }}>
