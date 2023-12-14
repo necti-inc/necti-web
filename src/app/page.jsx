@@ -13,6 +13,7 @@ import Solutions from "@/sections/section-solutions/Solutions";
 import OurWork from "@/sections/section-our-work/OurWork";
 
 import { faCheck, faDollarSign } from "@fortawesome/free-solid-svg-icons";
+import HomeTemporary from "@/sections/section-home-temporary/HomeTemporary";
 
 const itemsList = [
   [
@@ -39,24 +40,25 @@ const webPackageList = [
 export default function Home() {
   return (
     <div className={style.container}>
-      <HomeHeader />
-      <Solutions />
-      <MoreInfo />
-      <SectionPackages
-        priceOne="$50/mo"
-        priceTwo="$100/mo"
-        titleOne="Starter"
-        titleTwo="Premium"
-        packages={webPackageList}
-        showBorder={false}
-        buttonText="Discover more packages"
-      />
-      <HowItWorks title="Web-Development" collection={itemsList} />
-      <OurWork />
-      <BusinessBar />
-      <LearnMore />
-      <BrowseBySolution />
-      <ContactOurTeam />
+      <HomeTemporary />
+      {/*<HomeHeader />*/}
+      {/*<Solutions />*/}
+      {/*<MoreInfo />*/}
+      {/*<SectionPackages*/}
+      {/*  priceOne="$50/mo"*/}
+      {/*  priceTwo="$100/mo"*/}
+      {/*  titleOne="Starter"*/}
+      {/*  titleTwo="Premium"*/}
+      {/*  packages={webPackageList}*/}
+      {/*  showBorder={false}*/}
+      {/*  buttonText="Discover more packages"*/}
+      {/*/>*/}
+      {/*<HowItWorks title="Web-Development" collection={itemsList} />*/}
+      {/*<OurWork />*/}
+      {/*<BusinessBar />*/}
+      {/*<LearnMore />*/}
+      {/*<BrowseBySolution />*/}
+      {/*<ContactOurTeam />*/}
     </div>
   );
 }
