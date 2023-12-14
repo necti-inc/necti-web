@@ -1,6 +1,5 @@
 import React from "react";
 import style from "./sectionsolutionspackages.module.css";
-import theme from "@/app/theme";
 
 function SolutionTile(props) {
   return (

@@ -346,18 +346,18 @@ function SectionSolutionPackages() {
           mouseEnter={() => setIsMarketingHovered(true)}
           mouseLeave={() => setIsMarketingHovered(false)}
         />
-        <SolutionTile
-          onPress={buttonClick}
-          backgroundColor={activeColorAutomation[0]}
-          titleColor={activeColorAutomation[1]}
-          borderColor={
-            isAutomationHovered ? theme.primaryColor : activeColorAutomation[2]
-          }
-          fontWeight={activeColorAutomation[3]}
-          title="Automation"
-          mouseEnter={() => setIsAutomationHovered(true)}
-          mouseLeave={() => setIsAutomationHovered(false)}
-        />
+        {/*<SolutionTile*/}
+        {/*  onPress={buttonClick}*/}
+        {/*  backgroundColor={activeColorAutomation[0]}*/}
+        {/*  titleColor={activeColorAutomation[1]}*/}
+        {/*  borderColor={*/}
+        {/*    isAutomationHovered ? theme.primaryColor : activeColorAutomation[2]*/}
+        {/*  }*/}
+        {/*  fontWeight={activeColorAutomation[3]}*/}
+        {/*  title="Automation"*/}
+        {/*  mouseEnter={() => setIsAutomationHovered(true)}*/}
+        {/*  mouseLeave={() => setIsAutomationHovered(false)}*/}
+        {/*/>*/}
         <SolutionTile
           onPress={buttonClick}
           backgroundColor={activeColorEcommerce[0]}
@@ -386,15 +386,15 @@ function SectionSolutionPackages() {
           buttonText="Contact us today"
         />
       </div>
-      {activeSolutionList != null ? (
-        <SectionSolutionALaCarte solutions={activeSolutionList} />
-      ) : (
-        ""
-      )}
-      <HowItWorks
-        title={activeHowItWorksTitle}
-        collection={activeHowItWorksList}
-      />
+      {/*{activeSolutionList != null ? (*/}
+      {/*  <SectionSolutionALaCarte solutions={activeSolutionList} />*/}
+      {/*) : (*/}
+      {/*  ""*/}
+      {/*)}*/}
+      {/*<HowItWorks*/}
+      {/*  title={activeHowItWorksTitle}*/}
+      {/*  collection={activeHowItWorksList}*/}
+      {/*/>*/}
     </div>
   );
 }
