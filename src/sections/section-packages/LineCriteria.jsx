@@ -76,6 +76,7 @@ function LineCriteria(props) {
           ""
         )}
       </div>
+
       <div
         style={{ backgroundColor: props.backgroundColor }}
         className={style.criteriaContainerMobile}

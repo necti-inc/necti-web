@@ -1,6 +1,5 @@
 import React from "react";
 import style from "./packageoptions.module.css";
-import theme from "@/app/theme";
 import Link from "next/link";
 
 function PricingOption(props) {
@@ -39,6 +38,7 @@ function PricingOption(props) {
               borderTopRightRadius: props.borderRadius[1],
               borderBottomRightRadius: props.borderRadius[3],
               borderBottomLeftRadius: props.borderRadius[2],
+              width: props.boxWidth,
             }}
             className={style.priceContainer}
           >

@@ -22,13 +22,28 @@
   display: flex;
   flex-wrap: wrap; /* Allows items to wrap onto the next line */
   align-items: flex-start; /* Aligns items to the start of the line */
-  justify-content: flex-start; /* Aligns items to the left */
+  justify-content: center; /* Aligns items to the left */
   gap: 100px;
   padding-left: 5%;
   padding-right: 5%;
   margin-top: 80px;
 }
 
-.solutionsContainer > * { /* This targets all child elements */
-  flex: 0 0 29%; /* This sets the basis to 30% and doesn't allow growth or shrink */
+/*.solutionsContainer > * { !* This targets all child elements *!*/
+/*  flex: 0 0 29%; !* This sets the basis to 30% and doesn't allow growth or shrink *!*/
+/*}*/
+
+@media only screen and (max-width: 550px) {
+  .subTitle {
+    margin-top: 8px;
+    font-size: 15px;
+    line-height: 22px;
+  }
+
+  .solutionsContainer {
+    padding: 0;
+    justify-content: center;
+    margin-top: 40px;
+    gap: 50px;
+  }
 }

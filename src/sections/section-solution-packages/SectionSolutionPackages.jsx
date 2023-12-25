@@ -386,15 +386,15 @@ function SectionSolutionPackages() {
           buttonText="Contact us today"
         />
       </div>
-      {/*{activeSolutionList != null ? (*/}
-      {/*  <SectionSolutionALaCarte solutions={activeSolutionList} />*/}
-      {/*) : (*/}
-      {/*  ""*/}
-      {/*)}*/}
-      {/*<HowItWorks*/}
-      {/*  title={activeHowItWorksTitle}*/}
-      {/*  collection={activeHowItWorksList}*/}
-      {/*/>*/}
+      {activeSolutionList != null ? (
+        <SectionSolutionALaCarte solutions={activeSolutionList} />
+      ) : (
+        ""
+      )}
+      <HowItWorks
+        title={activeHowItWorksTitle}
+        collection={activeHowItWorksList}
+      />
     </div>
   );
 }

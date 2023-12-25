@@ -1,6 +1,6 @@
 .container {
-  height: 350px;
-  width: 390px;
+  height: 280px;
+  width: 320px;
   border-radius: 20px;
   border-width: 1px;
   transition: border-color box-shadow 0.3s ease-in-out;
@@ -17,8 +17,8 @@
   background-size: cover;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
-  height: 300px;
-  width: 390px;
+  height: 230px;
+  width: 320px;
 }
 
 .titleContainer {
@@ -41,4 +41,23 @@
 
 .type {
   font-size: 11px;
+}
+
+@media only screen and (max-width: 550px) {
+  .container {
+    height: 260px;
+    width: 300px;
+    border-radius: 20px;
+    border-width: 1px;
+    transition: border-color box-shadow 0.3s ease-in-out;
+  }
+
+  .imageElement {
+    background-size: cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    height: 210px;
+    width: 300px;
+  }
+
 }
