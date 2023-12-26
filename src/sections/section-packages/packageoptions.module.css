@@ -169,6 +169,11 @@
     display: none;
   }
 
+  .priceContainer {
+    padding: 6px 15px;
+    flex-direction: column;
+  }
+
   .mobileContainer {
     display: flex;
     flex-direction: column;
@@ -214,7 +219,7 @@
 @media only screen and (max-width: 800px) {
   .priceContainer {
     width: 200px;
-    padding: 18px 15px;
+    padding: 9px 15px;
   }
 
   .priceTitle {
