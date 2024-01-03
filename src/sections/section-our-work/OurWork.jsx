@@ -1,6 +1,5 @@
 import React from "react";
 import style from "./ourwork.module.css";
-import theme from "@/app/theme";
 import OurWorkItems from "./OurWorkItems";
 
 import PictureItMobile from "../../../public/customer-picture-it-mobile.png";
@@ -46,9 +45,6 @@ function OurWork() {
   ];
   return (
     <div className={style.ourWorkContainer}>
-      <h2 style={{ color: theme.black }} className={style.ourWorkHeader}>
-        Our Work
-      </h2>
       <OurWorkItems work={ourWork} />
     </div>
   );

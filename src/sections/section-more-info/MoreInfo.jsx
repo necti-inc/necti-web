@@ -11,8 +11,8 @@ const itemsList = [
     "Hosting fees are built right into the monthly payment.",
   ],
   [
-    "Unlimited edits",
-    "Change anything you want at anytime and it will be done that day.",
+    "Website adjustments",
+    "Change anything you want at anytime and it will be done within 2-3 days.",
   ],
   [
     "24/7 Customer Service",
@@ -47,7 +47,6 @@ function MoreInfo() {
         style={{
           borderColor: theme.grey,
           backgroundImage: 'url("/more-info-background.png")',
-          backgroundSize: "170% 80%",
           backgroundPosition: "right center",
           backgroundRepeat: "no-repeat",
         }}
@@ -56,14 +55,14 @@ function MoreInfo() {
         <h2 className={style.title} style={{ color: theme.black }}>
           <span style={{ color: theme.primaryColor }}>$0</span> down,{" "}
           <span style={{ color: theme.primaryColor }}>$100</span> per month,{" "}
-          <br /> 12 month minimum contract
+          <br /> no minimum contract
         </h2>
         <p className={style.subtitle} style={{ color: theme.darkGrey }}>
           $0 down for a standard 5 page small business website. If you need more
           than that then we have to do custom pricing based on the scope of
           work, number of additional pages, and time involved. <br /> <br /> You
           own your domain, content, listing, and profiles. Cancel anytime with
-          no feels or hassle.
+          no hassle or fees.
         </p>
         <div className={style.flexContainer}>
           {itemsList.map((item, index) => (

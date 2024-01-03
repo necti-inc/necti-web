@@ -21,6 +21,7 @@
   width: 50%;
   padding-right: 120px;
   padding-top: 170px;
+  background-size: 170% 80%;
 }
 
 .title {
@@ -70,4 +71,142 @@
   font-weight: 400;
   margin-top: 3px;
   line-height: 18px;
+}
+
+@media only screen and (max-width: 1635px) {
+  .rightContainer {
+    width: 55%;
+    padding-right: 110px;
+    padding-top: 170px;
+  }
+}
+
+@media only screen and (max-width: 1470px) {
+  .container {
+    flex-direction: column;
+    padding-bottom: 80px;
+  }
+
+  .leftContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 80px;
+    padding-left: 0;
+  }
+
+  .imageSize {
+    height: 400px;
+  }
+
+  .rightContainer {
+    width: 100%;
+    padding-top: 0;
+    padding-right: 10%;
+    padding-left: 10%;
+    text-align: center;
+    background-size: 100% 100%;
+  }
+
+  .flexContainer {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .item {
+    margin: 5px;
+    box-sizing: border-box;
+    margin-top: 28px;
+    text-align: left;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+
+  .subtitle {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+}
+
+@media only screen and (max-width: 880px) {
+  .checkTitle {
+    font-size: 16px;
+    margin-left: 10px;
+  }
+
+  .checkDescription {
+    font-size: 13px;
+    margin-left: 35px;
+    width: 300px;
+    font-weight: 400;
+    margin-top: 0;
+    line-height: 17px;
+  }
+
+  .textButtonIcon {
+    height: 20px;
+    width: auto;
+  }
+
+  .rightContainer {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+}
+
+@media only screen and (max-width: 785px) {
+
+  .rightContainer {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .imageSize {
+    height: 300px;
+  }
+
+  .leftContainer {
+    padding-top: 70px;
+  }
+
+  .rightContainer {
+    padding-left: 3%;
+    padding-right: 3%;
+    margin-top: -30px;
+    background-size: 220% 80%;
+  }
+
+  .title {
+    font-size: 25px;
+  }
+
+  .subtitle {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .checkTitle {
+    font-size: 18px;
+    margin-left: 10px;
+  }
+
+  .checkDescription {
+    font-size: 14px;
+    margin-left: 35px;
+    width: 300px;
+    font-weight: 400;
+    margin-top: 3px;
+    line-height: 18px;
+  }
+
+  .textButtonIcon {
+    height: 20px;
+    width: auto;
+  }
+
+  .flexContainer {
+    justify-content: center;
+  }
 }

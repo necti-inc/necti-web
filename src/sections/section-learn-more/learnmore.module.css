@@ -24,7 +24,7 @@
 }
 
 .cardContainer:hover {
-  border-width: 0px;
+  border-width: 0;
   cursor: pointer;
   box-shadow: 2px 10px 40px #dbdee1;
 }
@@ -64,4 +64,47 @@
   margin-left: 5px;
   margin-top: 1px;
   width: auto;
+}
+
+@media only screen and (max-width: 1440px) {
+  .cardContainer {
+    width: 380px;
+  }
+}
+
+@media only screen and (max-width: 1350px) {
+  .cardContainer {
+    width: 340px;
+    height: 250px;
+  }
+}
+
+@media only screen and (max-width: 1230px) {
+  .cardContainer {
+    width: 100%;
+    height: 250px;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .cardContainer {
+    width: 100%;
+    height: 250px;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top:80px;
+    padding-bottom: 80px;
+  }
 }

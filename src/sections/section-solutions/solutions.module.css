@@ -25,3 +25,63 @@
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
 }
+
+@media screen and (max-width: 1570px) {
+  .solutionTitle {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .solutionTitle {
+    font-size: 25px;
+  }
+
+  .solutionSubTitle {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 1225px) {
+  .solutionContainer {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+    padding-top: 125px;
+    padding-bottom: 125px;
+  }
+
+  .solutionTitle {
+    font-size: 35px;
+  }
+
+  .leftItem{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .solutionTitle {
+    font-size: 30px;
+  }
+
+  .solutionContainer {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+
+@media screen and (max-width: 510px) {
+  .solutionTitle {
+    font-size: 30px;
+  }
+
+  .solutionContainer {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+}

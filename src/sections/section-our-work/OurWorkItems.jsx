@@ -32,6 +32,9 @@ function OurWorkItems(props) {
 
   return (
     <div className={style.container}>
+      <h2 style={{ color: theme.black }} className={style.ourWorkHeader}>
+        Our Work
+      </h2>
       <div className={style.miniNav}>
         <MiniNavItem
           title="Website"

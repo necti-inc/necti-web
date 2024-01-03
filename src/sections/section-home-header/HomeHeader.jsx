@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import style from "./homeheader.module.css";
 import theme from "@/app/theme";
 import Link from "next/link";
@@ -11,7 +11,7 @@ function HomeHeader() {
 
   const buttonStyle = {
     backgroundColor: isHovered ? theme.primaryColor : theme.black,
-    color: isHovered ? theme.black : theme.white,
+    color: isHovered ? theme.white : theme.white,
     transition: "background-color 0.3s, color 0.3s",
   };
 
@@ -20,6 +20,7 @@ function HomeHeader() {
     color: isLeftHovered ? theme.primaryColor : theme.black,
     transition: "background-color 0.3s, color 0.3s",
   };
+
   return (
     <div
       style={{
@@ -27,9 +28,8 @@ function HomeHeader() {
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
-        width: "100%",
-        height: "100vh",
       }}
+      className={style.outerContainer}
     >
       <div className={style.heroContainer}>
         <h1 style={{ color: theme.black }} className={style.title}>
@@ -42,7 +42,6 @@ function HomeHeader() {
         <div className={style.ctaContainer}>
           <Link href={"/contact"}>
             <button
-              // style={{ backgroundColor: theme.black, color: theme.white }}
               style={buttonStyle}
               className="buttonDark"
               onMouseEnter={() => setIsHovered(true)}

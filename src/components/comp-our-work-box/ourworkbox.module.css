@@ -40,3 +40,48 @@
 .type {
   font-size: 11px;
 }
+
+@media only screen and (max-width: 1320px) {
+  .container {
+    height: 326px;
+    width: 340px;
+  }
+
+  .imageContainer {
+    height: 251px;
+  }
+
+  .imageElement {
+    height: 251px;
+  }
+}
+
+@media only screen and (max-width: 1120px) {
+  .container {
+    height: 276px;
+    width: 290px;
+  }
+
+  .imageContainer {
+    height: 205px;
+  }
+
+  .imageElement {
+    height: 201px;
+  }
+}
+
+@media only screen and (max-width: 975px) {
+  .container {
+    height: 326px;
+    width: 340px;
+  }
+
+  .imageContainer {
+    height: 254px;
+  }
+
+  .imageElement {
+    height: 251px;
+  }
+}

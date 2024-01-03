@@ -1,3 +1,5 @@
+"use client";
+
 import style from "./page.module.css";
 import theme from "./theme";
 import BusinessBar from "@/components/comp-business-bar/BusinessBar";
@@ -13,7 +15,6 @@ import Solutions from "@/sections/section-solutions/Solutions";
 import OurWork from "@/sections/section-our-work/OurWork";
 
 import { faCheck, faDollarSign } from "@fortawesome/free-solid-svg-icons";
-import HomeTemporary from "@/sections/section-home-temporary/HomeTemporary";
 
 const itemsList = [
   [
@@ -32,33 +33,42 @@ const webPackageList = [
   ["Website Development", theme.white, faCheck, faCheck],
   ["Website Hosting", theme.lightGrey, faCheck, faCheck],
   ["Website Maintenance", theme.white, faDollarSign, faCheck],
-  ["Website Analytics", theme.lightGrey, faDollarSign, faCheck],
-  ["Business Email Setup", theme.white, faDollarSign, faCheck],
-  ["Business Socials Setup", theme.lightGrey, faDollarSign, faCheck],
+  ["1-2 Website Changes Per Month", theme.lightGrey, faDollarSign, faCheck],
+  ["Customer Portal", theme.white, faDollarSign, faCheck],
+  [
+    "4-6 Website Changes Per Month",
+    theme.lightGrey,
+    faDollarSign,
+    faDollarSign,
+  ],
+  ["Website Analytics", theme.white, faDollarSign, faDollarSign],
+  ["1 Blog Post Per Month", theme.lightGrey, faDollarSign, faDollarSign],
 ];
 
 export default function Home() {
   return (
     <div className={style.container}>
-      <HomeTemporary />
-      {/*<HomeHeader />*/}
-      {/*<Solutions />*/}
-      {/*<MoreInfo />*/}
-      {/*<SectionPackages*/}
-      {/*  priceOne="$50/mo"*/}
-      {/*  priceTwo="$100/mo"*/}
-      {/*  titleOne="Starter"*/}
-      {/*  titleTwo="Premium"*/}
-      {/*  packages={webPackageList}*/}
-      {/*  showBorder={false}*/}
-      {/*  buttonText="Discover more packages"*/}
-      {/*/>*/}
-      {/*<HowItWorks title="Web-Development" collection={itemsList} />*/}
-      {/*<OurWork />*/}
-      {/*<BusinessBar />*/}
-      {/*<LearnMore />*/}
-      {/*<BrowseBySolution />*/}
-      {/*<ContactOurTeam />*/}
+      {/*<HomeTemporary />*/}
+      <HomeHeader />
+      <Solutions />
+      <MoreInfo />
+      <SectionPackages
+        priceOne="$50/mo"
+        priceTwo="$150/mo"
+        priceThree="$300/mo"
+        titleOne="Starter"
+        titleTwo="Plus"
+        titleThree="Premium"
+        packages={webPackageList}
+        showBorder={false}
+        buttonText="Discover more packages"
+      />
+      <HowItWorks title="Web-Development" collection={itemsList} />
+      <OurWork />
+      <BusinessBar />
+      <LearnMore />
+      <BrowseBySolution />
+      <ContactOurTeam />
     </div>
   );
 }
