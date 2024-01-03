@@ -48,7 +48,6 @@ const webPackageList = [
 export default function Home() {
   return (
     <div className={style.container}>
-      {/*<HomeTemporary />*/}
       <HomeHeader />
       <Solutions />
       <MoreInfo />

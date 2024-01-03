@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import style from "./navbar.module.css";
 import theme from "@/app/theme";
+import { useRouter } from "next/navigation";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
@@ -42,6 +43,8 @@ const links = [
 ];
 
 const Navbar = () => {
+  const router = useRouter(); // Initialize the router object
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -54,12 +57,13 @@ const Navbar = () => {
     }
   };
 
-  const onLinkClick = () => {
+  const onLinkClick = (url) => {
     if (isMenuOpen) {
+      router.push(url);
       setTimeout(() => {
         setIsMenuOpen(false);
         document.body.style.overflow = "";
-      }, 100);
+      }, 180);
     } else {
       setIsMenuOpen(true);
     }
@@ -109,18 +113,18 @@ const Navbar = () => {
         >
           {links.map((link) => (
             <button
-              style={{ borderColor: theme.grey }}
+              style={{ borderColor: theme.grey, color: theme.black }}
+              onClick={() => onLinkClick(link.url)}
               className={style.linkMobile}
-              onClick={onLinkClick}
               key={link.id}
             >
-              <Link
-                style={{ borderColor: theme.grey }}
-                href={link.url}
-                className={style.linkMobile}
-              >
-                {link.title}
-              </Link>
+              {/*<Link*/}
+              {/*  style={{ borderColor: theme.grey }}*/}
+              {/*  href={link.url}*/}
+              {/*  // className={style.linkMobile}*/}
+              {/*>*/}
+              {link.title}
+              {/*</Link>*/}
             </button>
           ))}
         </div>
