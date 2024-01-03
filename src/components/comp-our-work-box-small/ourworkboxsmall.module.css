@@ -28,7 +28,6 @@
 }
 
 .titleContainer {
-  border-top: 1px solid;
   position: relative;
   padding-left: 20px;
   padding-top: 4%;
@@ -46,11 +45,15 @@
 
 @media (max-width: 700px) {
   .container {
-    height: 325px;
-    width: 100%;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    border-top-right-radius: 40px;
-    border-top-left-radius: 40px;
+    height: 326px;
+    width: 340px;
+  }
+
+  .imageElement {
+    height: 251px;
+  }
+
+  .imageContainer {
+    height: 254px;
   }
 }
