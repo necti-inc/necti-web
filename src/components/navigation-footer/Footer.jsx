@@ -66,7 +66,9 @@ const Footer = () => {
           Copyright © 2024
         </p>
         <div className={style.iconBox}>
-          <div
+          <a
+            href={"https://www.instagram.com/necti.io/"}
+            target={"_blank"}
             style={{ backgroundColor: theme.lightBlack }}
             className={style.iconContainer}
           >
@@ -75,8 +77,10 @@ const Footer = () => {
               className={style.footerIcon}
               icon={faInstagram}
             />
-          </div>
-          <div
+          </a>
+          <a
+            href={"https://www.facebook.com/necti.io/"}
+            target={"_blank"}
             style={{ backgroundColor: theme.lightBlack }}
             className={style.iconContainer}
           >
@@ -85,7 +89,7 @@ const Footer = () => {
               className={style.footerIcon}
               icon={faFacebookF}
             />
-          </div>
+          </a>
         </div>
       </div>
     </div>
