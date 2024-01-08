@@ -1,6 +1,5 @@
 "use client";
 
-import style from "./page.module.css";
 import theme from "./theme";
 import BusinessBar from "@/components/comp-business-bar/BusinessBar";
 
@@ -47,7 +46,7 @@ const webPackageList = [
 
 export default function Home() {
   return (
-    <div className={style.container}>
+    <div>
       <HomeHeader />
       <Solutions />
       <MoreInfo />

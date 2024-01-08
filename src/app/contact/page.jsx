@@ -1,5 +1,4 @@
 import React from "react";
-import styles from "./page.module.css";
 import SectionContactForm from "@/sections/section-contact-form/SectionContactForm";
 import CustomerResponse from "@/sections/section-contact-customer/CustomerResponse";
 

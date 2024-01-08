@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import style from "./navbar.module.css";
 import theme from "@/app/theme";
@@ -47,6 +47,11 @@ const Navbar = () => {
   const [hoveredLinks, setHoveredLinks] = useState({});
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [currentPath, setCurrentPath] = useState("");
+
+  useEffect(() => {
+    setCurrentPath(window.location.pathname);
+  }, []);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -77,8 +82,6 @@ const Navbar = () => {
   const handleMouseLeave = (id) => {
     setHoveredLinks({ ...hoveredLinks, [id]: false });
   };
-
-  console.log(window.location.pathname);
 
   return (
     <div
@@ -116,14 +119,15 @@ const Navbar = () => {
             onMouseEnter={() => handleMouseEnter(link.id)}
             onMouseLeave={() => handleMouseLeave(link.id)}
             key={link.id}
+            onClick={() => {
+              setCurrentPath(link.url);
+            }}
           >
             <Link
               style={{
                 color: hoveredLinks[link.id] ? theme.primaryColor : theme.black,
                 borderColor:
-                  window.location.pathname === link.url
-                    ? theme.primaryColor
-                    : theme.white,
+                  currentPath === link.url ? theme.primaryColor : theme.white,
               }}
               key={link.id}
               href={link.url}
