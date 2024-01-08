@@ -3,8 +3,9 @@ import "./globals.css";
 import Footer from "@/components/navigation-footer/Footer";
 
 export const metadata = {
-  title: "necti",
-  description: "Website Development",
+  title: "Necti - Website Development & Digital Marketing",
+  description:
+    "Necti is a digital powerhouse specializing in crafting state-of-the-art website solutions and innovative digital marketing strategies. Led by a team of passionate experts, Necti collaborates with brands to ignite their online presence and accelerate growth. With a pulse on the latest tech trends and a network of digital maestros, Necti is your beacon in the digital landscape, ever-ready to guide and amplify your brand's digital voice.",
 };
 
 export default function RootLayout({ children }) {

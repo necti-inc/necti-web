@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import style from "./businessbar.module.css";
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import theme from "@/app/theme";
 import Link from "next/link";
 
@@ -23,7 +23,9 @@ function BusinessBarItem(props) {
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
-        <h4 className={style.title}>{props.title}</h4>
+        <h4 style={{ color: theme.primaryColor }} className={style.title}>
+          {props.title}
+        </h4>
         <div className={style.lowerContainer}>
           <p style={buttonStyle} className={style.lowerTitle}>
             {props.description}

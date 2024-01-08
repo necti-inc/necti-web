@@ -44,6 +44,7 @@ const links = [
 
 const Navbar = () => {
   const router = useRouter(); // Initialize the router object
+  const [hoveredLinks, setHoveredLinks] = useState({});
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -68,6 +69,16 @@ const Navbar = () => {
       setIsMenuOpen(true);
     }
   };
+
+  const handleMouseEnter = (id) => {
+    setHoveredLinks({ ...hoveredLinks, [id]: true });
+  };
+
+  const handleMouseLeave = (id) => {
+    setHoveredLinks({ ...hoveredLinks, [id]: false });
+  };
+
+  console.log(window.location.pathname);
 
   return (
     <div
@@ -101,9 +112,26 @@ const Navbar = () => {
       </button>
       <div style={{ color: theme.black }} className={style.links}>
         {links.map((link) => (
-          <Link key={link.id} href={link.url} className={style.link}>
-            {link.title}
-          </Link>
+          <button
+            onMouseEnter={() => handleMouseEnter(link.id)}
+            onMouseLeave={() => handleMouseLeave(link.id)}
+            key={link.id}
+          >
+            <Link
+              style={{
+                color: hoveredLinks[link.id] ? theme.primaryColor : theme.black,
+                borderColor:
+                  window.location.pathname === link.url
+                    ? theme.primaryColor
+                    : theme.white,
+              }}
+              key={link.id}
+              href={link.url}
+              className={style.link}
+            >
+              {link.title}
+            </Link>
+          </button>
         ))}
       </div>
       {isMenuOpen && (
