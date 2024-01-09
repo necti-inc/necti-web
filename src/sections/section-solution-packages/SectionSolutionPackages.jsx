@@ -186,9 +186,9 @@ function SectionSolutionPackages() {
         ["2 Story Posts", theme.white, faDollarSign, faCheck],
       ]);
       setActiveSolutionList([
-        ["Additional Post", "Web Development", "$25", CartePost],
-        ["Story Post", "Web Development", "$20", CarteStory],
-        ["Facebook Ad Setup", "Web Development", "$75", CarteFacebookAd],
+        ["Additional Post", "Marketing Solution", "$25", CartePost],
+        ["Story Post", "Marketing Solution", "$20", CarteStory],
+        ["Facebook Ad Setup", "Marketing Solution", "$75", CarteFacebookAd],
         [
           "Instagram Boost Setup",
           "Web Development",
