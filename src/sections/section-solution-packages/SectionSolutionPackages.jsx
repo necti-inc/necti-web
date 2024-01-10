@@ -43,9 +43,9 @@ function SectionSolutionPackages() {
   ]);
 
   const [activeSolutionList, setActiveSolutionList] = useState([
-    ["SEO Optimization", "Web Development", "$35/mo", CarteSEO],
-    ["Copy-writing", "Web Development", "$100", CarteCopy],
-    ["Website Changes", "Web Development", "$400", CarteChanges],
+    ["SEO Optimization", "Web Development", "$35+/mo", CarteSEO],
+    ["Copy-writing", "Web Development", "$100+", CarteCopy],
+    ["Website Changes", "Web Development", "$400+", CarteChanges],
   ]);
 
   const [activeHowItWorksList, setActiveHowItWorksList] = useState([
@@ -63,9 +63,9 @@ function SectionSolutionPackages() {
   const [activeHowItWorksTitle, setActiveHowItWorksTitle] =
     useState("Web-Development");
 
-  const [activePriceOne, setActivePriceOne] = useState("$50/mo");
-  const [activePriceTwo, setActivePriceTwo] = useState("$150/mo");
-  const [activePriceThree, setActivePriceThree] = useState("$300/mo");
+  const [activePriceOne, setActivePriceOne] = useState("$50+/mo");
+  const [activePriceTwo, setActivePriceTwo] = useState("$150+/mo");
+  const [activePriceThree, setActivePriceThree] = useState("$300+/mo");
 
   const [activeTitleOne, setActiveTitleOne] = useState("Starter");
   const [activeTitleTwo, setActiveTitleTwo] = useState("Plus");
@@ -78,7 +78,7 @@ function SectionSolutionPackages() {
   const [activeColorWeb, setActiveColorWeb] = useState([
     theme.primaryColor,
     theme.lightGrey,
-    theme.black,
+    theme.primaryColor,
     600,
   ]);
   const [activeColorMarketing, setActiveColorMarketing] = useState([
@@ -112,7 +112,7 @@ function SectionSolutionPackages() {
       setActiveColorWeb([
         theme.primaryColor,
         theme.lightGrey,
-        theme.black,
+        theme.primaryColor,
         600,
       ]);
       setActiveColorMarketing([theme.white, theme.black, theme.grey, 500]);
@@ -140,9 +140,9 @@ function SectionSolutionPackages() {
         ["1 Blog Post Per Month", theme.lightGrey, faDollarSign, faDollarSign],
       ]);
       setActiveSolutionList([
-        ["SEO Optimization", "Web Development", "$35/mo", CarteSEO],
-        ["Copy-writing", "Web Development", "$100", CarteCopy],
-        ["Website Changes", "Web Development", "$400", CarteChanges],
+        ["SEO Optimization", "Web Development", "$35+/mo", CarteSEO],
+        ["Copy-writing", "Web Development", "$100+", CarteCopy],
+        ["Website Changes", "Web Development", "$400+", CarteChanges],
       ]);
       setActiveHowItWorksTitle("Web-Development");
       setActiveHowItWorksList([
@@ -159,9 +159,9 @@ function SectionSolutionPackages() {
           "Once development is complete you will be able to choose the best hosting plan for you.",
         ],
       ]);
-      setActivePriceOne("$50/mo");
-      setActivePriceTwo("$150/mo");
-      setActivePriceThree("$300/mo");
+      setActivePriceOne("$50+/mo");
+      setActivePriceTwo("$150+/mo");
+      setActivePriceThree("$300+/mo");
       setActiveTitleTwo("Plus");
       setActiveTitleThree("Premium");
       // setActiveDescriptionOne("Forms in about 2 to 4 weeks *");
@@ -171,7 +171,7 @@ function SectionSolutionPackages() {
       setActiveColorMarketing([
         theme.primaryColor,
         theme.lightGrey,
-        theme.black,
+        theme.primaryColor,
         600,
       ]);
       setActiveColorWeb([theme.white, theme.black, theme.grey, 500]);
@@ -186,19 +186,19 @@ function SectionSolutionPackages() {
         ["2 Story Posts", theme.white, faDollarSign, faCheck],
       ]);
       setActiveSolutionList([
-        ["Additional Post", "Marketing Solution", "$25", CartePost],
-        ["Story Post", "Marketing Solution", "$20", CarteStory],
-        ["Facebook Ad Setup", "Marketing Solution", "$75", CarteFacebookAd],
+        ["Additional Post", "Marketing Solution", "$25+", CartePost],
+        ["Story Post", "Marketing Solution", "$20+", CarteStory],
+        ["Facebook Ad Setup", "Marketing Solution", "$75+", CarteFacebookAd],
         [
           "Instagram Boost Setup",
-          "Web Development",
-          "$25",
+          "Marketing Solution",
+          "$25+",
           CarteInstagramBoost,
         ],
         [
           "Facebook Group Post",
-          "Web Development",
-          "$50",
+          "Marketing Solution",
+          "$50+",
           CarteFacebookGroupPost,
         ],
       ]);
@@ -217,8 +217,8 @@ function SectionSolutionPackages() {
           "Continuously optimize your marketing efforts based on data-driven insights for maximum impact.",
         ],
       ]);
-      setActivePriceOne("$150/mo");
-      setActivePriceTwo("$300/mo");
+      setActivePriceOne("$150+/mo");
+      setActivePriceTwo("$300+/mo");
       setActivePriceThree(null);
       setActiveTitleTwo("Premium");
       setActiveTitleThree(null);
@@ -229,7 +229,7 @@ function SectionSolutionPackages() {
       setActiveColorAutomation([
         theme.primaryColor,
         theme.lightGrey,
-        theme.black,
+        theme.primaryColor,
         600,
       ]);
       setActiveColorWeb([theme.white, theme.black, theme.grey, 500]);
@@ -272,7 +272,7 @@ function SectionSolutionPackages() {
       setActiveColorEcommerce([
         theme.primaryColor,
         theme.lightGrey,
-        theme.black,
+        theme.primaryColor,
         600,
       ]);
       setActiveColorWeb([theme.white, theme.black, theme.grey, 500]);

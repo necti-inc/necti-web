@@ -51,9 +51,9 @@ export default function Home() {
       <Solutions />
       <MoreInfo />
       <SectionPackages
-        priceOne="$50/mo"
-        priceTwo="$150/mo"
-        priceThree="$300/mo"
+        priceOne="$50+/mo"
+        priceTwo="$150+/mo"
+        priceThree="$300+/mo"
         titleOne="Starter"
         titleTwo="Plus"
         titleThree="Premium"
