@@ -1,5 +1,5 @@
 .container {
-  height: 375px;
+  height: 315px;
   width: 399px;
   border-radius: 25px;
   transition: border-color box-shadow 0.3s ease-in-out;
@@ -11,7 +11,7 @@
 }
 
 .imageContainer {
-  height: 300px;
+  height: 240px;
   width: 100%;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
@@ -21,7 +21,7 @@
   background-size: cover;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
-  height: 300px;
+  height: 240px;
   width: 100%;
 }
 
@@ -43,45 +43,45 @@
 
 @media only screen and (max-width: 1320px) {
   .container {
-    height: 326px;
+    height: 266px;
     width: 340px;
   }
 
   .imageContainer {
-    height: 251px;
+    height: 191px;
   }
 
   .imageElement {
-    height: 251px;
+    height: 191px;
   }
 }
 
 @media only screen and (max-width: 1120px) {
   .container {
-    height: 276px;
+    height: 234px;
     width: 290px;
   }
 
   .imageContainer {
-    height: 205px;
+    height: 165px;
   }
 
   .imageElement {
-    height: 201px;
+    height: 165px;
   }
 }
 
 @media only screen and (max-width: 975px) {
   .container {
-    height: 326px;
+    height: 277px;
     width: 340px;
   }
 
   .imageContainer {
-    height: 254px;
+    height: 202px;
   }
 
   .imageElement {
-    height: 251px;
+    height: 202px;
   }
 }
