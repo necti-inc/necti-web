@@ -178,12 +178,15 @@ function SectionSolutionPackages() {
       setActiveColorAutomation([theme.white, theme.black, theme.grey, 500]);
       setActiveColorEcommerce([theme.white, theme.black, theme.grey, 500]);
       setActivePackageList([
-        ["4 Posts & Caption Creation", theme.lightGrey, faCheck, faCheck],
-        ["8 Posts & Caption Creation", theme.white, faDollarSign, faCheck],
-        ["Post Scheduling", theme.lightGrey, faDollarSign, faCheck],
-        ["Hashtag Curation", theme.white, faDollarSign, faCheck],
-        ["Monthly Analytics Report", theme.lightGrey, faDollarSign, faCheck],
-        ["2 Story Posts", theme.white, faDollarSign, faCheck],
+        ["8 Posts & Caption Creation", theme.lightGrey, faCheck, faCheck],
+        ["2 Story Posts", theme.white, faCheck, faCheck],
+        ["Monthly Analytics Report", theme.lightGrey, faCheck, faCheck],
+        ["Hashtag Curation", theme.white, faCheck, faCheck],
+        ["Content Calendar", theme.lightGrey, faCheck, faCheck],
+        ["16 Posts & Caption Creation", theme.white, faDollarSign, faCheck],
+        ["4 Story Posts", theme.lightGrey, faDollarSign, faCheck],
+        ["Post Scheduling", theme.white, faDollarSign, faCheck],
+        ["Bi-Weekly Engagement", theme.lightGrey, faDollarSign, faCheck],
       ]);
       setActiveSolutionList([
         ["Additional Post", "Marketing Solution", "$25+", CartePost],
@@ -217,8 +220,8 @@ function SectionSolutionPackages() {
           "Continuously optimize your marketing efforts based on data-driven insights for maximum impact.",
         ],
       ]);
-      setActivePriceOne("$150+/mo");
-      setActivePriceTwo("$300+/mo");
+      setActivePriceOne("$600+/mo");
+      setActivePriceTwo("$1200+/mo");
       setActivePriceThree(null);
       setActiveTitleTwo("Premium");
       setActiveTitleThree(null);
@@ -386,11 +389,11 @@ function SectionSolutionPackages() {
           buttonText="Contact us today"
         />
       </div>
-      {activeSolutionList != null ? (
-        <SectionSolutionALaCarte solutions={activeSolutionList} />
-      ) : (
-        ""
-      )}
+      {/*{activeSolutionList != null ? (*/}
+      {/*  <SectionSolutionALaCarte solutions={activeSolutionList} />*/}
+      {/*) : (*/}
+      {/*  ""*/}
+      {/*)}*/}
       <HowItWorks
         title={activeHowItWorksTitle}
         collection={activeHowItWorksList}

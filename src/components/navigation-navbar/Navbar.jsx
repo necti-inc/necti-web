@@ -91,9 +91,16 @@ const Navbar = () => {
         borderColor: isMenuOpen ? theme.grey : "transparent",
       }}
     >
-      <Link style={{ color: theme.black }} href={"/"} className={style.logo}>
-        necti
-      </Link>
+      <button
+        onClick={() => {
+          setCurrentPath("/");
+        }}
+        className={style.logo}
+      >
+        <Link style={{ color: theme.black }} href={"/"} className={style.logo}>
+          necti
+        </Link>
+      </button>
       <button
         onClick={toggleMenu}
         className={style.menuButton}

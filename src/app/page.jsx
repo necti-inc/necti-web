@@ -14,6 +14,9 @@ import Solutions from "@/sections/section-solutions/Solutions";
 import OurWork from "@/sections/section-our-work/OurWork";
 
 import { faCheck, faDollarSign } from "@fortawesome/free-solid-svg-icons";
+import SectionHomeImage from "@/sections/section-home-image/SectionHomeImage";
+import HomeGirl from "../../public/home-girl.png";
+import HomeOffice from "../../public/home-dashboard.png";
 
 const itemsList = [
   [
@@ -49,6 +52,12 @@ export default function Home() {
     <div>
       <HomeHeader />
       <Solutions />
+      <SectionHomeImage
+        imageElement={HomeGirl}
+        imageDescription={"necti helps you elevate and grow."}
+        topSpace={"150px"}
+        bottomSpace={"0px"}
+      />
       <MoreInfo />
       <SectionPackages
         priceOne="$50+/mo"
@@ -60,6 +69,12 @@ export default function Home() {
         packages={webPackageList}
         showBorder={false}
         buttonText="Discover more packages"
+      />
+      <SectionHomeImage
+        imageElement={HomeOffice}
+        imageDescription={"necti helps you plan and grow your business."}
+        topSpace={"50px"}
+        bottomSpace={"130px"}
       />
       <HowItWorks title="Web-Development" collection={itemsList} />
       <OurWork />
