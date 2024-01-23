@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import style from "./navbar.module.css";
 import theme from "@/app/theme";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname, useSearchParams } from "next/navigation";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
@@ -49,10 +49,6 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [currentPath, setCurrentPath] = useState("");
 
-  useEffect(() => {
-    setCurrentPath(window.location.pathname);
-  }, []);
-
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
 
@@ -62,6 +58,13 @@ const Navbar = () => {
       document.body.style.overflow = "";
     }
   };
+
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+  useEffect(() => {
+    const url = pathname + searchParams.toString();
+    setCurrentPath(url);
+  }, [pathname, searchParams]);
 
   const onLinkClick = (url) => {
     if (isMenuOpen) {

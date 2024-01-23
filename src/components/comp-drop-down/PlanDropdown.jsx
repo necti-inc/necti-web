@@ -7,7 +7,7 @@ import theme from "@/app/theme";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
 const PlanDropdown = (props) => {
-  const currentPlan = props.value || "Please select...";
+  // const currentPlan = props.value || "Please select...";
   const [isOpen, setIsOpen] = useState(false);
   const [selectedPlan, setSelectedPlan] = useState([
     props.value,
@@ -68,7 +68,15 @@ const PlanDropdown = (props) => {
               key={index}
               onClick={() => handleOptionClick(item, 600, theme.black)}
             >
-              {item}
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                }}
+              >
+                <p>{item[0]}</p>
+                <p>{item[1]}</p>
+              </div>
             </li>
           ))}
           {/*<li*/}

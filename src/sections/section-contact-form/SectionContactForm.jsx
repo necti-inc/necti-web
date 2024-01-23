@@ -29,7 +29,12 @@ function SectionContactForm() {
   const [isHovered, setIsHovered] = useState(false);
   const timeoutRef = useRef(null);
 
-  const planValues = ["Website Starter", "Website Pro", "Website Advanced"];
+  const planValues = [
+    ["Website Starter", "$50+/mo"],
+    ["Website Premium", "$100+/mo"],
+    ["Marketing Starter", "$600+/mo"],
+    ["Marketing Premium", "$1200+/mo"],
+  ];
   const carteValues = ["SEO Optimization", "Copy Writing", "CRM Dashboard"];
 
   const buttonStyle = {
@@ -271,12 +276,12 @@ function SectionContactForm() {
               onChange={(plan) => setPlanValue(plan)}
               items={planValues}
             />
-            <PlanDropdown
-              value={carteValue}
-              title={"A La Carte Solution"}
-              onChange={(plan) => setCarteValue(plan)}
-              items={carteValues}
-            />
+            {/*<PlanDropdown*/}
+            {/*  value={carteValue}*/}
+            {/*  title={"A La Carte Solution"}*/}
+            {/*  onChange={(plan) => setCarteValue(plan)}*/}
+            {/*  items={carteValues}*/}
+            {/*/>*/}
             <LargeTextInput
               title={"Anything else?"}
               placeholder={"I need a nice website."}

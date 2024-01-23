@@ -35,16 +35,16 @@ const webPackageList = [
   ["Website Development", theme.white, faCheck, faCheck],
   ["Website Hosting", theme.lightGrey, faCheck, faCheck],
   ["Website Maintenance", theme.white, faDollarSign, faCheck],
-  ["1-2 Website Changes Per Month", theme.lightGrey, faDollarSign, faCheck],
-  ["Customer Portal", theme.white, faDollarSign, faCheck],
-  [
-    "4-6 Website Changes Per Month",
-    theme.lightGrey,
-    faDollarSign,
-    faDollarSign,
-  ],
-  ["Website Analytics", theme.white, faDollarSign, faDollarSign],
-  ["1 Blog Post Per Month", theme.lightGrey, faDollarSign, faDollarSign],
+  ["Monthly Website Revisions", theme.lightGrey, faDollarSign, faCheck],
+  // ["Customer Portal", theme.white, faDollarSign, faCheck],
+  // [
+  //   "4-6 Website Changes Per Month",
+  //   theme.lightGrey,
+  //   faDollarSign,
+  //   faDollarSign,
+  // ],
+  // ["Website Analytics", theme.white, faDollarSign, faDollarSign],
+  // ["1 Blog Post Per Month", theme.lightGrey, faDollarSign, faDollarSign],
 ];
 
 export default function Home() {
@@ -61,11 +61,9 @@ export default function Home() {
       <MoreInfo />
       <SectionPackages
         priceOne="$50+/mo"
-        priceTwo="$150+/mo"
-        priceThree="$300+/mo"
+        priceTwo="$100+/mo"
         titleOne="Starter"
-        titleTwo="Plus"
-        titleThree="Premium"
+        titleTwo="Premium"
         packages={webPackageList}
         showBorder={false}
         buttonText="Discover more packages"
