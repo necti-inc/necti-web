@@ -35,7 +35,7 @@ function SectionContactForm() {
     ["Marketing Starter", "$600+/mo"],
     ["Marketing Premium", "$1200+/mo"],
   ];
-  const carteValues = ["SEO Optimization", "Copy Writing", "CRM Dashboard"];
+  // const carteValues = ["SEO Optimization", "Copy Writing", "CRM Dashboard"];
 
   const buttonStyle = {
     backgroundColor: isHovered ? theme.primaryColor : theme.black,
@@ -361,12 +361,12 @@ function SectionContactForm() {
               onChange={(plan) => setPlanValue(plan)}
               items={planValues}
             />
-            <PlanDropdown
-              value={carteValue}
-              title={"A La Carte Solution"}
-              onChange={(plan) => setCarteValue(plan)}
-              items={carteValues}
-            />
+            {/*<PlanDropdown*/}
+            {/*  value={carteValue}*/}
+            {/*  title={"A La Carte Solution"}*/}
+            {/*  onChange={(plan) => setCarteValue(plan)}*/}
+            {/*  items={carteValues}*/}
+            {/*/>*/}
             <LargeTextInput
               title={"Anything else?"}
               placeholder={"I need a nice website."}
