@@ -30,16 +30,16 @@ function SectionSolutionPackages() {
     ["Website Development", theme.white, faCheck, faCheck],
     ["Website Hosting", theme.lightGrey, faCheck, faCheck],
     ["Website Maintenance", theme.white, faDollarSign, faCheck],
-    ["1-2 Website Changes Per Month", theme.lightGrey, faDollarSign, faCheck],
-    ["Customer Portal", theme.white, faDollarSign, faCheck],
-    [
-      "4-6 Website Changes Per Month",
-      theme.lightGrey,
-      faDollarSign,
-      faDollarSign,
-    ],
-    ["Website Analytics", theme.white, faDollarSign, faDollarSign],
-    ["1 Blog Post Per Month", theme.lightGrey, faDollarSign, faDollarSign],
+    ["Monthly Website Revisions", theme.lightGrey, faDollarSign, faCheck],
+    // ["Customer Portal", theme.white, faDollarSign, faCheck],
+    // [
+    //   "4-6 Website Changes Per Month",
+    //   theme.lightGrey,
+    //   faDollarSign,
+    //   faDollarSign,
+    // ],
+    // ["Website Analytics", theme.white, faDollarSign, faDollarSign],
+    // ["1 Blog Post Per Month", theme.lightGrey, faDollarSign, faDollarSign],
   ]);
 
   const [activeSolutionList, setActiveSolutionList] = useState([
@@ -64,12 +64,12 @@ function SectionSolutionPackages() {
     useState("Web-Development");
 
   const [activePriceOne, setActivePriceOne] = useState("$50+/mo");
-  const [activePriceTwo, setActivePriceTwo] = useState("$150+/mo");
-  const [activePriceThree, setActivePriceThree] = useState("$300+/mo");
+  const [activePriceTwo, setActivePriceTwo] = useState("$100+/mo");
+  const [activePriceThree, setActivePriceThree] = useState(null);
 
   const [activeTitleOne, setActiveTitleOne] = useState("Starter");
-  const [activeTitleTwo, setActiveTitleTwo] = useState("Plus");
-  const [activeTitleThree, setActiveTitleThree] = useState("Premium");
+  const [activeTitleTwo, setActiveTitleTwo] = useState("Premium");
+  const [activeTitleThree, setActiveTitleThree] = useState(null);
 
   const [activeDescriptionOne, setActiveDescriptionOne] = useState(null);
   const [activeDescriptionTwo, setActiveDescriptionTwo] = useState(null);
@@ -123,21 +123,16 @@ function SectionSolutionPackages() {
         ["Website Development", theme.white, faCheck, faCheck],
         ["Website Hosting", theme.lightGrey, faCheck, faCheck],
         ["Website Maintenance", theme.white, faDollarSign, faCheck],
-        [
-          "1-2 Website Changes Per Month",
-          theme.lightGrey,
-          faDollarSign,
-          faCheck,
-        ],
-        ["Customer Portal", theme.white, faDollarSign, faCheck],
-        [
-          "4-6 Website Changes Per Month",
-          theme.lightGrey,
-          faDollarSign,
-          faDollarSign,
-        ],
-        ["Website Analytics", theme.white, faDollarSign, faDollarSign],
-        ["1 Blog Post Per Month", theme.lightGrey, faDollarSign, faDollarSign],
+        ["Monthly Website Revisions", theme.lightGrey, faDollarSign, faCheck],
+        // ["Customer Portal", theme.white, faDollarSign, faCheck],
+        // [
+        //   "4-6 Website Changes Per Month",
+        //   theme.lightGrey,
+        //   faDollarSign,
+        //   faDollarSign,
+        // ],
+        // ["Monthly Website Analytics", theme.white, faDollarSign, faDollarSign],
+        // ["1 Blog Post Per Month", theme.lightGrey, faDollarSign, faDollarSign],
       ]);
       setActiveSolutionList([
         ["SEO Optimization", "Web Development", "$35+/mo", CarteSEO],
@@ -160,10 +155,10 @@ function SectionSolutionPackages() {
         ],
       ]);
       setActivePriceOne("$50+/mo");
-      setActivePriceTwo("$150+/mo");
-      setActivePriceThree("$300+/mo");
+      setActivePriceTwo("$100+/mo");
+      setActivePriceThree(null);
       setActiveTitleTwo("Plus");
-      setActiveTitleThree("Premium");
+      setActiveTitleThree(null);
       // setActiveDescriptionOne("Forms in about 2 to 4 weeks *");
       // setActiveDescriptionTwo("Forms in about 1 to 2 weeks *");
       // setActiveDescriptionThree("Forms in about 4 to 6 days * ");
