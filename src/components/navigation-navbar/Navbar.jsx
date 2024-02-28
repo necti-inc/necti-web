@@ -147,6 +147,18 @@ const Navbar = () => {
             </Link>
           </button>
         ))}
+        <a
+          style={{
+            backgroundColor: theme.primaryColor,
+            borderColor: theme.primaryColor,
+            color: theme.white,
+          }}
+          className={style.headerButton}
+          href={"https://billing.stripe.com/p/login/9AQ165a5p6Qs01i288"}
+          target={"_blank"}
+        >
+          <p>Portal</p>
+        </a>
       </div>
       {isMenuOpen && (
         <div
@@ -169,6 +181,18 @@ const Navbar = () => {
               {/*</Link>*/}
             </button>
           ))}
+          <a
+            style={{
+              backgroundColor: theme.primaryColor,
+              borderColor: theme.primaryColor,
+              color: theme.white,
+            }}
+            className={style.headerButton}
+            href={"https://billing.stripe.com/p/login/9AQ165a5p6Qs01i288"}
+            target={"_blank"}
+          >
+            <p>Portal</p>
+          </a>
         </div>
       )}
     </div>

@@ -33,9 +33,9 @@ const itemsList = [
 const webPackageList = [
   ["Website Design", theme.lightGrey, faCheck, faCheck],
   ["Website Development", theme.white, faCheck, faCheck],
-  ["Website Hosting", theme.lightGrey, faCheck, faCheck],
-  ["Website Maintenance", theme.white, faDollarSign, faCheck],
-  ["Monthly Website Revisions", theme.lightGrey, faDollarSign, faCheck],
+  ["Domain Transfer", theme.lightGrey, faCheck, faCheck],
+  ["1-2 Page Website", theme.white, faCheck, faCheck],
+  ["1-6 Page Website", theme.lightGrey, faDollarSign, faCheck],
   // ["Customer Portal", theme.white, faDollarSign, faCheck],
   // [
   //   "4-6 Website Changes Per Month",
@@ -60,8 +60,8 @@ export default function Home() {
       />
       <MoreInfo />
       <SectionPackages
-        priceOne="$50+/mo"
-        priceTwo="$100+/mo"
+        priceOne="$850+"
+        priceTwo="$1250+"
         titleOne="Starter"
         titleTwo="Premium"
         packages={webPackageList}

@@ -28,9 +28,9 @@ function SectionSolutionPackages() {
   const [activePackageList, setActivePackageList] = useState([
     ["Website Design", theme.lightGrey, faCheck, faCheck],
     ["Website Development", theme.white, faCheck, faCheck],
-    ["Website Hosting", theme.lightGrey, faCheck, faCheck],
-    ["Website Maintenance", theme.white, faDollarSign, faCheck],
-    ["Monthly Website Revisions", theme.lightGrey, faDollarSign, faCheck],
+    ["Domain Transfer", theme.lightGrey, faCheck, faCheck],
+    ["1-2 Page Website", theme.white, faCheck, faCheck],
+    ["1-6 Page Website", theme.lightGrey, faDollarSign, faCheck],
     // ["Customer Portal", theme.white, faDollarSign, faCheck],
     // [
     //   "4-6 Website Changes Per Month",
@@ -63,8 +63,8 @@ function SectionSolutionPackages() {
   const [activeHowItWorksTitle, setActiveHowItWorksTitle] =
     useState("Web-Development");
 
-  const [activePriceOne, setActivePriceOne] = useState("$50+/mo");
-  const [activePriceTwo, setActivePriceTwo] = useState("$100+/mo");
+  const [activePriceOne, setActivePriceOne] = useState("$850+");
+  const [activePriceTwo, setActivePriceTwo] = useState("$1250+");
   const [activePriceThree, setActivePriceThree] = useState(null);
 
   const [activeTitleOne, setActiveTitleOne] = useState("Starter");
@@ -108,7 +108,7 @@ function SectionSolutionPackages() {
   ]);
 
   function buttonClick(title) {
-    if (title === "Website") {
+    if (title === "Custom Website") {
       setActiveColorWeb([
         theme.primaryColor,
         theme.lightGrey,
@@ -121,9 +121,9 @@ function SectionSolutionPackages() {
       setActivePackageList([
         ["Website Design", theme.lightGrey, faCheck, faCheck],
         ["Website Development", theme.white, faCheck, faCheck],
-        ["Website Hosting", theme.lightGrey, faCheck, faCheck],
-        ["Website Maintenance", theme.white, faDollarSign, faCheck],
-        ["Monthly Website Revisions", theme.lightGrey, faDollarSign, faCheck],
+        ["Domain Transfer", theme.lightGrey, faCheck, faCheck],
+        ["1-2 Page Website", theme.white, faCheck, faCheck],
+        ["1-6 Page Website", theme.lightGrey, faDollarSign, faCheck],
         // ["Customer Portal", theme.white, faDollarSign, faCheck],
         // [
         //   "4-6 Website Changes Per Month",
@@ -134,11 +134,11 @@ function SectionSolutionPackages() {
         // ["Monthly Website Analytics", theme.white, faDollarSign, faDollarSign],
         // ["1 Blog Post Per Month", theme.lightGrey, faDollarSign, faDollarSign],
       ]);
-      setActiveSolutionList([
-        ["SEO Optimization", "Web Development", "$35+/mo", CarteSEO],
-        ["Copy-writing", "Web Development", "$100+", CarteCopy],
-        ["Website Changes", "Web Development", "$400+", CarteChanges],
-      ]);
+      // setActiveSolutionList([
+      //   ["SEO Optimization", "Web Development", "$35+/mo", CarteSEO],
+      //   ["Copy-writing", "Web Development", "$100+", CarteCopy],
+      //   ["Website Changes", "Web Development", "$400+", CarteChanges],
+      // ]);
       setActiveHowItWorksTitle("Web-Development");
       setActiveHowItWorksList([
         [
@@ -154,15 +154,15 @@ function SectionSolutionPackages() {
           "Once development is complete you will be able to choose the best hosting plan for you.",
         ],
       ]);
-      setActivePriceOne("$50+/mo");
-      setActivePriceTwo("$100+/mo");
+      setActivePriceOne("$850+");
+      setActivePriceTwo("$1250+");
       setActivePriceThree(null);
       setActiveTitleTwo("Plus");
       setActiveTitleThree(null);
       // setActiveDescriptionOne("Forms in about 2 to 4 weeks *");
       // setActiveDescriptionTwo("Forms in about 1 to 2 weeks *");
       // setActiveDescriptionThree("Forms in about 4 to 6 days * ");
-    } else if (title === "Marketing") {
+    } else if (title === "Website Hosting") {
       setActiveColorMarketing([
         theme.primaryColor,
         theme.lightGrey,
@@ -173,50 +173,46 @@ function SectionSolutionPackages() {
       setActiveColorAutomation([theme.white, theme.black, theme.grey, 500]);
       setActiveColorEcommerce([theme.white, theme.black, theme.grey, 500]);
       setActivePackageList([
-        ["8 Posts & Caption Creation", theme.lightGrey, faCheck, faCheck],
-        ["2 Story Posts", theme.white, faCheck, faCheck],
-        ["Monthly Analytics Report", theme.lightGrey, faCheck, faCheck],
-        ["Hashtag Curation", theme.white, faCheck, faCheck],
-        ["Content Calendar", theme.lightGrey, faCheck, faCheck],
-        ["16 Posts & Caption Creation", theme.white, faDollarSign, faCheck],
-        ["4 Story Posts", theme.lightGrey, faDollarSign, faCheck],
-        ["Post Scheduling", theme.white, faDollarSign, faCheck],
-        ["Bi-Weekly Engagement", theme.lightGrey, faDollarSign, faCheck],
+        ["HTTPS Security", theme.lightGrey, faCheck, faCheck],
+        ["Fast Globally (Edge Network)", theme.white, faCheck, faCheck],
+        ["1TB Bandwidth", theme.lightGrey, faCheck, faCheck],
+        ["Data Cache", theme.white, faCheck, faCheck],
+        ["Email Support", theme.lightGrey, faCheck, faCheck],
       ]);
-      setActiveSolutionList([
-        ["Additional Post", "Marketing Solution", "$25+", CartePost],
-        ["Story Post", "Marketing Solution", "$20+", CarteStory],
-        ["Facebook Ad Setup", "Marketing Solution", "$75+", CarteFacebookAd],
-        [
-          "Instagram Boost Setup",
-          "Marketing Solution",
-          "$25+",
-          CarteInstagramBoost,
-        ],
-        [
-          "Facebook Group Post",
-          "Marketing Solution",
-          "$50+",
-          CarteFacebookGroupPost,
-        ],
-      ]);
-      setActiveHowItWorksTitle("Marketing");
+      // setActiveSolutionList([
+      //   ["Additional Post", "Marketing Solution", "$25+", CartePost],
+      //   ["Story Post", "Marketing Solution", "$20+", CarteStory],
+      //   ["Facebook Ad Setup", "Marketing Solution", "$75+", CarteFacebookAd],
+      //   [
+      //     "Instagram Boost Setup",
+      //     "Marketing Solution",
+      //     "$25+",
+      //     CarteInstagramBoost,
+      //   ],
+      //   [
+      //     "Facebook Group Post",
+      //     "Marketing Solution",
+      //     "$50+",
+      //     CarteFacebookGroupPost,
+      //   ],
+      // ]);
+      setActiveHowItWorksTitle("Website Hosting");
       setActiveHowItWorksList([
         [
-          "Strategize",
-          "Develop a comprehensive marketing strategy tailored to your business goals and target audience.",
+          "Security",
+          "Ensure secure connections with HTTPS, protecting your website and user data.",
         ],
         [
-          "Engage",
-          "Utilize social media and digital channels to engage with your audience and build a loyal community.",
+          "Data Cache",
+          "Improve load times and reduce server load with effective data caching strategies.",
         ],
         [
-          "Optimize",
-          "Continuously optimize your marketing efforts based on data-driven insights for maximum impact.",
+          "Email Support",
+          "Get dedicated email support for any hosting-related queries or issues.",
         ],
       ]);
-      setActivePriceOne("$600+/mo");
-      setActivePriceTwo("$1200+/mo");
+      setActivePriceOne("$14.99/mo");
+      setActivePriceTwo("$120/yr");
       setActivePriceThree(null);
       setActiveTitleTwo("Premium");
       setActiveTitleThree(null);
@@ -328,21 +324,9 @@ function SectionSolutionPackages() {
             isWebsiteHovered ? theme.primaryColor : activeColorWeb[2]
           }
           fontWeight={activeColorWeb[3]}
-          title="Website"
+          title="Custom Website"
           mouseEnter={() => setIsWebsiteHovered(true)}
           mouseLeave={() => setIsWebsiteHovered(false)}
-        />
-        <SolutionTile
-          onPress={buttonClick}
-          backgroundColor={activeColorMarketing[0]}
-          titleColor={activeColorMarketing[1]}
-          borderColor={
-            isMarketingHovered ? theme.primaryColor : activeColorMarketing[2]
-          }
-          fontWeight={activeColorMarketing[3]}
-          title="Marketing"
-          mouseEnter={() => setIsMarketingHovered(true)}
-          mouseLeave={() => setIsMarketingHovered(false)}
         />
         {/*<SolutionTile*/}
         {/*  onPress={buttonClick}*/}
@@ -356,6 +340,18 @@ function SectionSolutionPackages() {
         {/*  mouseEnter={() => setIsAutomationHovered(true)}*/}
         {/*  mouseLeave={() => setIsAutomationHovered(false)}*/}
         {/*/>*/}
+        <SolutionTile
+          onPress={buttonClick}
+          backgroundColor={activeColorMarketing[0]}
+          titleColor={activeColorMarketing[1]}
+          borderColor={
+            isMarketingHovered ? theme.primaryColor : activeColorMarketing[2]
+          }
+          fontWeight={activeColorMarketing[3]}
+          title="Website Hosting"
+          mouseEnter={() => setIsMarketingHovered(true)}
+          mouseLeave={() => setIsMarketingHovered(false)}
+        />
         <SolutionTile
           onPress={buttonClick}
           backgroundColor={activeColorEcommerce[0]}
