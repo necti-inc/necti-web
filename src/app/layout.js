@@ -2,6 +2,7 @@ import Navbar from "@/components/navigation-navbar/Navbar";
 import "./globals.css";
 import Footer from "@/components/navigation-footer/Footer";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata = {
   title: "Necti - Website Development & Digital Marketing",
@@ -21,6 +22,7 @@ export default function RootLayout({ children }) {
       <body>
         <div>
           <SpeedInsights />
+          <Analytics />
           <Navbar />
           {children}
           <Footer />
