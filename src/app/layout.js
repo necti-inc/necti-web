@@ -1,6 +1,7 @@
 import Navbar from "@/components/navigation-navbar/Navbar";
 import "./globals.css";
 import Footer from "@/components/navigation-footer/Footer";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata = {
   title: "Necti - Website Development & Digital Marketing",
@@ -19,6 +20,7 @@ export default function RootLayout({ children }) {
       </head>
       <body>
         <div>
+          <SpeedInsights />
           <Navbar />
           {children}
           <Footer />
