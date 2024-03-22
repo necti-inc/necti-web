@@ -30,10 +30,10 @@ function SectionContactForm() {
   const timeoutRef = useRef(null);
 
   const planValues = [
-    ["Website Starter", "$50+/mo"],
-    ["Website Premium", "$100+/mo"],
-    ["Marketing Starter", "$600+/mo"],
-    ["Marketing Premium", "$1200+/mo"],
+    ["Website Starter", "$850+"],
+    ["Website Premium", "$1250+"],
+    ["Website Starter", "$3000+"],
+    ["Website Premium", "$6000+"],
   ];
   // const carteValues = ["SEO Optimization", "Copy Writing", "CRM Dashboard"];
 

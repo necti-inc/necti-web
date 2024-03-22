@@ -157,7 +157,8 @@ function SectionSolutionPackages() {
       setActivePriceOne("$850+");
       setActivePriceTwo("$1250+");
       setActivePriceThree(null);
-      setActiveTitleTwo("Plus");
+      setActiveTitleOne("Starter")
+      setActiveTitleTwo("Premium");
       setActiveTitleThree(null);
       // setActiveDescriptionOne("Forms in about 2 to 4 weeks *");
       // setActiveDescriptionTwo("Forms in about 1 to 2 weeks *");
@@ -214,7 +215,8 @@ function SectionSolutionPackages() {
       setActivePriceOne("$14.99/mo");
       setActivePriceTwo("$120/yr");
       setActivePriceThree(null);
-      setActiveTitleTwo("Premium");
+      setActiveTitleOne("Monthly")
+      setActiveTitleTwo("Annually");
       setActiveTitleThree(null);
       setActiveDescriptionOne(null);
       setActiveDescriptionTwo(null);
@@ -257,6 +259,7 @@ function SectionSolutionPackages() {
       setActivePriceTwo("$4,000+");
       setActiveTitleThree(null);
       setActivePriceThree(null);
+      setActiveTitleOne("Starter")
       setActiveTitleTwo("Premium");
       setActiveDescriptionOne(null);
       setActiveDescriptionTwo(null);
@@ -306,6 +309,7 @@ function SectionSolutionPackages() {
       setActivePriceTwo("$6,000+");
       setActiveTitleThree(null);
       setActivePriceThree(null);
+      setActiveTitleOne("Starter")
       setActiveTitleTwo("Premium");
       setActiveDescriptionOne(null);
       setActiveDescriptionTwo(null);

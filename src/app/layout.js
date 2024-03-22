@@ -3,6 +3,7 @@ import "./globals.css";
 import Footer from "@/components/navigation-footer/Footer";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/react";
+import Image from "next/image";
 
 export const metadata = {
   title: "Necti - Website Development & Digital Marketing",
